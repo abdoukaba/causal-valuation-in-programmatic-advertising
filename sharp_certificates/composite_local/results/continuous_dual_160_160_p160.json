@@ -1,0 +1,1291 @@
+{
+  "groups": 160,
+  "parts": 160,
+  "bits": 160,
+  "scope": "fixed FEM midpoint rival flow, full continuous time and belief, max TV over all times",
+  "policy_coupling_upper": "0.0396548571",
+  "exact_response_residual_TV_upper": "0.062326238983",
+  "frozen_policy_residual_TV_upper": "0.022671381876",
+  "time_bounds": [
+    {
+      "group": 0,
+      "dynamics": "0.001594535097",
+      "terminal": "0.004396281031",
+      "reference": "0.002823239298",
+      "surrogate_flow_residual_upper": "0.007255041332",
+      "exact_response_residual_upper": "0.046909898433"
+    },
+    {
+      "group": 1,
+      "dynamics": "0.001671285420",
+      "terminal": "0.004375153632",
+      "reference": "0.002822748565",
+      "surrogate_flow_residual_upper": "0.007332742991",
+      "exact_response_residual_upper": "0.046987600092"
+    },
+    {
+      "group": 2,
+      "dynamics": "0.001747870526",
+      "terminal": "0.004353696266",
+      "reference": "0.002821942811",
+      "surrogate_flow_residual_upper": "0.007409770360",
+      "exact_response_residual_upper": "0.047064627461"
+    },
+    {
+      "group": 3,
+      "dynamics": "0.001824284753",
+      "terminal": "0.004331907737",
+      "reference": "0.002820756089",
+      "surrogate_flow_residual_upper": "0.007486046619",
+      "exact_response_residual_upper": "0.047140903721"
+    },
+    {
+      "group": 4,
+      "dynamics": "0.001900522374",
+      "terminal": "0.004309786656",
+      "reference": "0.002819296508",
+      "surrogate_flow_residual_upper": "0.007561670799",
+      "exact_response_residual_upper": "0.047216527901"
+    },
+    {
+      "group": 5,
+      "dynamics": "0.001976577593",
+      "terminal": "0.004287331671",
+      "reference": "0.002817563954",
+      "surrogate_flow_residual_upper": "0.007636633166",
+      "exact_response_residual_upper": "0.047291490268"
+    },
+    {
+      "group": 6,
+      "dynamics": "0.002052444523",
+      "terminal": "0.004264542064",
+      "reference": "0.002815558508",
+      "surrogate_flow_residual_upper": "0.007710925937",
+      "exact_response_residual_upper": "0.047365783039"
+    },
+    {
+      "group": 7,
+      "dynamics": "0.002128117220",
+      "terminal": "0.004241482450",
+      "reference": "0.002813280359",
+      "surrogate_flow_residual_upper": "0.007784539501",
+      "exact_response_residual_upper": "0.047439396603"
+    },
+    {
+      "group": 8,
+      "dynamics": "0.002203589646",
+      "terminal": "0.004218085657",
+      "reference": "0.002810729773",
+      "surrogate_flow_residual_upper": "0.007857464222",
+      "exact_response_residual_upper": "0.047512321324"
+    },
+    {
+      "group": 9,
+      "dynamics": "0.002278855703",
+      "terminal": "0.004194350132",
+      "reference": "0.002807907071",
+      "surrogate_flow_residual_upper": "0.007929689980",
+      "exact_response_residual_upper": "0.047584547082"
+    },
+    {
+      "group": 10,
+      "dynamics": "0.002353909197",
+      "terminal": "0.004170275441",
+      "reference": "0.002804812615",
+      "surrogate_flow_residual_upper": "0.008001207972",
+      "exact_response_residual_upper": "0.047656065073"
+    },
+    {
+      "group": 11,
+      "dynamics": "0.002428743877",
+      "terminal": "0.004145859954",
+      "reference": "0.002801446798",
+      "surrogate_flow_residual_upper": "0.008072008894",
+      "exact_response_residual_upper": "0.047726865995"
+    },
+    {
+      "group": 12,
+      "dynamics": "0.002503353401",
+      "terminal": "0.004121102832",
+      "reference": "0.002797778263",
+      "surrogate_flow_residual_upper": "0.008142051586",
+      "exact_response_residual_upper": "0.047796908688"
+    },
+    {
+      "group": 13,
+      "dynamics": "0.002577731344",
+      "terminal": "0.004096003562",
+      "reference": "0.002793772807",
+      "surrogate_flow_residual_upper": "0.008211291032",
+      "exact_response_residual_upper": "0.047866148134"
+    },
+    {
+      "group": 14,
+      "dynamics": "0.002651871214",
+      "terminal": "0.004070561159",
+      "reference": "0.002789498291",
+      "surrogate_flow_residual_upper": "0.008279786467",
+      "exact_response_residual_upper": "0.047934643569"
+    },
+    {
+      "group": 15,
+      "dynamics": "0.002725766421",
+      "terminal": "0.004044774518",
+      "reference": "0.002784955226",
+      "surrogate_flow_residual_upper": "0.008347525995",
+      "exact_response_residual_upper": "0.048002383097"
+    },
+    {
+      "group": 16,
+      "dynamics": "0.002799410306",
+      "terminal": "0.004018643363",
+      "reference": "0.002780144143",
+      "surrogate_flow_residual_upper": "0.008414501827",
+      "exact_response_residual_upper": "0.048069358929"
+    },
+    {
+      "group": 17,
+      "dynamics": "0.002872796125",
+      "terminal": "0.003992166849",
+      "reference": "0.002775065608",
+      "surrogate_flow_residual_upper": "0.008480702859",
+      "exact_response_residual_upper": "0.048135559960"
+    },
+    {
+      "group": 18,
+      "dynamics": "0.002945917052",
+      "terminal": "0.003965344158",
+      "reference": "0.002769720221",
+      "surrogate_flow_residual_upper": "0.008546119314",
+      "exact_response_residual_upper": "0.048200976415"
+    },
+    {
+      "group": 19,
+      "dynamics": "0.003018766180",
+      "terminal": "0.003938175207",
+      "reference": "0.002764108612",
+      "surrogate_flow_residual_upper": "0.008610740891",
+      "exact_response_residual_upper": "0.048265597993"
+    },
+    {
+      "group": 20,
+      "dynamics": "0.003091336511",
+      "terminal": "0.003910659379",
+      "reference": "0.002758231433",
+      "surrogate_flow_residual_upper": "0.008674557674",
+      "exact_response_residual_upper": "0.048329414775"
+    },
+    {
+      "group": 21,
+      "dynamics": "0.003163620967",
+      "terminal": "0.003882795993",
+      "reference": "0.002752092036",
+      "surrogate_flow_residual_upper": "0.008737585678",
+      "exact_response_residual_upper": "0.048392442779"
+    },
+    {
+      "group": 22,
+      "dynamics": "0.003235612383",
+      "terminal": "0.003854585134",
+      "reference": "0.002745693200",
+      "surrogate_flow_residual_upper": "0.008799795638",
+      "exact_response_residual_upper": "0.048454652740"
+    },
+    {
+      "group": 23,
+      "dynamics": "0.003307303514",
+      "terminal": "0.003826026381",
+      "reference": "0.002739031512",
+      "surrogate_flow_residual_upper": "0.008861169376",
+      "exact_response_residual_upper": "0.048516026478"
+    },
+    {
+      "group": 24,
+      "dynamics": "0.003378687022",
+      "terminal": "0.003797119631",
+      "reference": "0.002732107718",
+      "surrogate_flow_residual_upper": "0.008921698055",
+      "exact_response_residual_upper": "0.048576555157"
+    },
+    {
+      "group": 25,
+      "dynamics": "0.003449755488",
+      "terminal": "0.003767864872",
+      "reference": "0.002724922602",
+      "surrogate_flow_residual_upper": "0.008981369980",
+      "exact_response_residual_upper": "0.048636227082"
+    },
+    {
+      "group": 26,
+      "dynamics": "0.003520501399",
+      "terminal": "0.003738261626",
+      "reference": "0.002717476967",
+      "surrogate_flow_residual_upper": "0.009040173840",
+      "exact_response_residual_upper": "0.048695030942"
+    },
+    {
+      "group": 27,
+      "dynamics": "0.003590917165",
+      "terminal": "0.003708310689",
+      "reference": "0.002709771661",
+      "surrogate_flow_residual_upper": "0.009098100614",
+      "exact_response_residual_upper": "0.048752957716"
+    },
+    {
+      "group": 28,
+      "dynamics": "0.003660995090",
+      "terminal": "0.003678011709",
+      "reference": "0.002701810200",
+      "surrogate_flow_residual_upper": "0.009155140115",
+      "exact_response_residual_upper": "0.048809997217"
+    },
+    {
+      "group": 29,
+      "dynamics": "0.003730727416",
+      "terminal": "0.003647365170",
+      "reference": "0.002693601689",
+      "surrogate_flow_residual_upper": "0.009211292791",
+      "exact_response_residual_upper": "0.048866149893"
+    },
+    {
+      "group": 30,
+      "dynamics": "0.003800106273",
+      "terminal": "0.003616371360",
+      "reference": "0.002685136986",
+      "surrogate_flow_residual_upper": "0.009266533753",
+      "exact_response_residual_upper": "0.048921390857"
+    },
+    {
+      "group": 31,
+      "dynamics": "0.003869123710",
+      "terminal": "0.003585030725",
+      "reference": "0.002676417049",
+      "surrogate_flow_residual_upper": "0.009320855567",
+      "exact_response_residual_upper": "0.048975712670"
+    },
+    {
+      "group": 32,
+      "dynamics": "0.003937771690",
+      "terminal": "0.003553343889",
+      "reference": "0.002667446772",
+      "surrogate_flow_residual_upper": "0.009374247674",
+      "exact_response_residual_upper": "0.049029104777"
+    },
+    {
+      "group": 33,
+      "dynamics": "0.004006042081",
+      "terminal": "0.003521318030",
+      "reference": "0.002658239008",
+      "surrogate_flow_residual_upper": "0.009426712944",
+      "exact_response_residual_upper": "0.049081570048"
+    },
+    {
+      "group": 34,
+      "dynamics": "0.004073926662",
+      "terminal": "0.003489019341",
+      "reference": "0.002648782447",
+      "surrogate_flow_residual_upper": "0.009478226759",
+      "exact_response_residual_upper": "0.049133083863"
+    },
+    {
+      "group": 35,
+      "dynamics": "0.004141417124",
+      "terminal": "0.003456376064",
+      "reference": "0.002639093976",
+      "surrogate_flow_residual_upper": "0.009528793534",
+      "exact_response_residual_upper": "0.049183650638"
+    },
+    {
+      "group": 36,
+      "dynamics": "0.004208505064",
+      "terminal": "0.003423389489",
+      "reference": "0.002629165323",
+      "surrogate_flow_residual_upper": "0.009578393366",
+      "exact_response_residual_upper": "0.049233250470"
+    },
+    {
+      "group": 37,
+      "dynamics": "0.004275181991",
+      "terminal": "0.003390060806",
+      "reference": "0.002619008541",
+      "surrogate_flow_residual_upper": "0.009627025192",
+      "exact_response_residual_upper": "0.049281882295"
+    },
+    {
+      "group": 38,
+      "dynamics": "0.004341439316",
+      "terminal": "0.003356391120",
+      "reference": "0.002608623063",
+      "surrogate_flow_residual_upper": "0.009674675241",
+      "exact_response_residual_upper": "0.049329532343"
+    },
+    {
+      "group": 39,
+      "dynamics": "0.004407268364",
+      "terminal": "0.003322381685",
+      "reference": "0.002597993746",
+      "surrogate_flow_residual_upper": "0.009721315086",
+      "exact_response_residual_upper": "0.049376172190"
+    },
+    {
+      "group": 40,
+      "dynamics": "0.004472660367",
+      "terminal": "0.003288034046",
+      "reference": "0.002587153138",
+      "surrogate_flow_residual_upper": "0.009766965767",
+      "exact_response_residual_upper": "0.049421822871"
+    },
+    {
+      "group": 41,
+      "dynamics": "0.004537606475",
+      "terminal": "0.003253349586",
+      "reference": "0.002576131886",
+      "surrogate_flow_residual_upper": "0.009811643097",
+      "exact_response_residual_upper": "0.049466500199"
+    },
+    {
+      "group": 42,
+      "dynamics": "0.004602097721",
+      "terminal": "0.003218330229",
+      "reference": "0.002564979953",
+      "surrogate_flow_residual_upper": "0.009855385361",
+      "exact_response_residual_upper": "0.049510242465"
+    },
+    {
+      "group": 43,
+      "dynamics": "0.004666125079",
+      "terminal": "0.003182977650",
+      "reference": "0.002555917940",
+      "surrogate_flow_residual_upper": "0.009900399564",
+      "exact_response_residual_upper": "0.049555256666"
+    },
+    {
+      "group": 44,
+      "dynamics": "0.004729679410",
+      "terminal": "0.003147273523",
+      "reference": "0.002546706087",
+      "surrogate_flow_residual_upper": "0.009944432266",
+      "exact_response_residual_upper": "0.049599289369"
+    },
+    {
+      "group": 45,
+      "dynamics": "0.004792751484",
+      "terminal": "0.003111189005",
+      "reference": "0.002536754451",
+      "surrogate_flow_residual_upper": "0.009986879768",
+      "exact_response_residual_upper": "0.049641736870"
+    },
+    {
+      "group": 46,
+      "dynamics": "0.004855331987",
+      "terminal": "0.003074778691",
+      "reference": "0.002524758988",
+      "surrogate_flow_residual_upper": "0.010052919419",
+      "exact_response_residual_upper": "0.049707776523"
+    },
+    {
+      "group": 47,
+      "dynamics": "0.004917411506",
+      "terminal": "0.003038045166",
+      "reference": "0.002512458199",
+      "surrogate_flow_residual_upper": "0.010127835436",
+      "exact_response_residual_upper": "0.049782692540"
+    },
+    {
+      "group": 48,
+      "dynamics": "0.004978980566",
+      "terminal": "0.003000991064",
+      "reference": "0.002499871681",
+      "surrogate_flow_residual_upper": "0.010201897957",
+      "exact_response_residual_upper": "0.049856755060"
+    },
+    {
+      "group": 49,
+      "dynamics": "0.005040029549",
+      "terminal": "0.002963619326",
+      "reference": "0.002487009375",
+      "surrogate_flow_residual_upper": "0.010275104063",
+      "exact_response_residual_upper": "0.049929961167"
+    },
+    {
+      "group": 50,
+      "dynamics": "0.005100548786",
+      "terminal": "0.002925932745",
+      "reference": "0.002473880701",
+      "surrogate_flow_residual_upper": "0.010347451356",
+      "exact_response_residual_upper": "0.050002308457"
+    },
+    {
+      "group": 51,
+      "dynamics": "0.005160528518",
+      "terminal": "0.002887975464",
+      "reference": "0.002460503135",
+      "surrogate_flow_residual_upper": "0.010418944632",
+      "exact_response_residual_upper": "0.050073801734"
+    },
+    {
+      "group": 52,
+      "dynamics": "0.005219958866",
+      "terminal": "0.002849762340",
+      "reference": "0.002446871367",
+      "surrogate_flow_residual_upper": "0.010489566400",
+      "exact_response_residual_upper": "0.050144423504"
+    },
+    {
+      "group": 53,
+      "dynamics": "0.005278829903",
+      "terminal": "0.002847488809",
+      "reference": "0.002432999856",
+      "surrogate_flow_residual_upper": "0.010559318568",
+      "exact_response_residual_upper": "0.050214175670"
+    },
+    {
+      "group": 54,
+      "dynamics": "0.005337131582",
+      "terminal": "0.002872167974",
+      "reference": "0.002418879787",
+      "surrogate_flow_residual_upper": "0.010628179342",
+      "exact_response_residual_upper": "0.050283036445"
+    },
+    {
+      "group": 55,
+      "dynamics": "0.005394853776",
+      "terminal": "0.002896770403",
+      "reference": "0.002404534192",
+      "surrogate_flow_residual_upper": "0.010696158369",
+      "exact_response_residual_upper": "0.050351015471"
+    },
+    {
+      "group": 56,
+      "dynamics": "0.005451986270",
+      "terminal": "0.002921293912",
+      "reference": "0.002389947797",
+      "surrogate_flow_residual_upper": "0.010763227980",
+      "exact_response_residual_upper": "0.050418085083"
+    },
+    {
+      "group": 57,
+      "dynamics": "0.005508518776",
+      "terminal": "0.002945734597",
+      "reference": "0.002375127505",
+      "surrogate_flow_residual_upper": "0.010829380874",
+      "exact_response_residual_upper": "0.050484237975"
+    },
+    {
+      "group": 58,
+      "dynamics": "0.005564440912",
+      "terminal": "0.002970091015",
+      "reference": "0.002360086123",
+      "surrogate_flow_residual_upper": "0.010894618048",
+      "exact_response_residual_upper": "0.050549475150"
+    },
+    {
+      "group": 59,
+      "dynamics": "0.005619742218",
+      "terminal": "0.002994358610",
+      "reference": "0.002344824462",
+      "surrogate_flow_residual_upper": "0.010958925290",
+      "exact_response_residual_upper": "0.050613782393"
+    },
+    {
+      "group": 60,
+      "dynamics": "0.005674412134",
+      "terminal": "0.003018535739",
+      "reference": "0.002329336863",
+      "surrogate_flow_residual_upper": "0.011022284734",
+      "exact_response_residual_upper": "0.050677141838"
+    },
+    {
+      "group": 61,
+      "dynamics": "0.005728440037",
+      "terminal": "0.003042618568",
+      "reference": "0.002313616705",
+      "surrogate_flow_residual_upper": "0.011084675306",
+      "exact_response_residual_upper": "0.050739532408"
+    },
+    {
+      "group": 62,
+      "dynamics": "0.005781815214",
+      "terminal": "0.003066604310",
+      "reference": "0.002297681957",
+      "surrogate_flow_residual_upper": "0.011146101480",
+      "exact_response_residual_upper": "0.050800958584"
+    },
+    {
+      "group": 63,
+      "dynamics": "0.005834526871",
+      "terminal": "0.003090489845",
+      "reference": "0.002281538004",
+      "surrogate_flow_residual_upper": "0.011206554720",
+      "exact_response_residual_upper": "0.050861411824"
+    },
+    {
+      "group": 64,
+      "dynamics": "0.005886564147",
+      "terminal": "0.003114272175",
+      "reference": "0.002265184138",
+      "surrogate_flow_residual_upper": "0.011266020458",
+      "exact_response_residual_upper": "0.050920877562"
+    },
+    {
+      "group": 65,
+      "dynamics": "0.005937916073",
+      "terminal": "0.003137948417",
+      "reference": "0.002248620959",
+      "surrogate_flow_residual_upper": "0.011324485446",
+      "exact_response_residual_upper": "0.050979342553"
+    },
+    {
+      "group": 66,
+      "dynamics": "0.005988571648",
+      "terminal": "0.003161513932",
+      "reference": "0.002231854278",
+      "surrogate_flow_residual_upper": "0.011381939862",
+      "exact_response_residual_upper": "0.051036796969"
+    },
+    {
+      "group": 67,
+      "dynamics": "0.006038519772",
+      "terminal": "0.003184966993",
+      "reference": "0.002214886651",
+      "surrogate_flow_residual_upper": "0.011438373416",
+      "exact_response_residual_upper": "0.051093230524"
+    },
+    {
+      "group": 68,
+      "dynamics": "0.006087749271",
+      "terminal": "0.003208303425",
+      "reference": "0.002197708282",
+      "surrogate_flow_residual_upper": "0.011493760982",
+      "exact_response_residual_upper": "0.051148618089"
+    },
+    {
+      "group": 69,
+      "dynamics": "0.006136248910",
+      "terminal": "0.003231520781",
+      "reference": "0.002180318374",
+      "surrogate_flow_residual_upper": "0.011548088062",
+      "exact_response_residual_upper": "0.051202945170"
+    },
+    {
+      "group": 70,
+      "dynamics": "0.006184007391",
+      "terminal": "0.003254615325",
+      "reference": "0.002162728045",
+      "surrogate_flow_residual_upper": "0.011601350761",
+      "exact_response_residual_upper": "0.051256207868"
+    },
+    {
+      "group": 71,
+      "dynamics": "0.006231013328",
+      "terminal": "0.003277583648",
+      "reference": "0.002144938286",
+      "surrogate_flow_residual_upper": "0.011653535265",
+      "exact_response_residual_upper": "0.051308392373"
+    },
+    {
+      "group": 72,
+      "dynamics": "0.006278431817",
+      "terminal": "0.003300421743",
+      "reference": "0.002126950896",
+      "surrogate_flow_residual_upper": "0.011704627953",
+      "exact_response_residual_upper": "0.051359485060"
+    },
+    {
+      "group": 73,
+      "dynamics": "0.006326354221",
+      "terminal": "0.003323126622",
+      "reference": "0.002108767347",
+      "surrogate_flow_residual_upper": "0.011754615809",
+      "exact_response_residual_upper": "0.051409472913"
+    },
+    {
+      "group": 74,
+      "dynamics": "0.006374835381",
+      "terminal": "0.003345694931",
+      "reference": "0.002090388456",
+      "surrogate_flow_residual_upper": "0.011803538079",
+      "exact_response_residual_upper": "0.051458395187"
+    },
+    {
+      "group": 75,
+      "dynamics": "0.006423835723",
+      "terminal": "0.003368123401",
+      "reference": "0.002071817564",
+      "surrogate_flow_residual_upper": "0.011851393702",
+      "exact_response_residual_upper": "0.051506250809"
+    },
+    {
+      "group": 76,
+      "dynamics": "0.006473349488",
+      "terminal": "0.003390407432",
+      "reference": "0.002053055620",
+      "surrogate_flow_residual_upper": "0.011898226789",
+      "exact_response_residual_upper": "0.051553083893"
+    },
+    {
+      "group": 77,
+      "dynamics": "0.006523379492",
+      "terminal": "0.003412544847",
+      "reference": "0.002034103681",
+      "surrogate_flow_residual_upper": "0.011945858131",
+      "exact_response_residual_upper": "0.051600715238"
+    },
+    {
+      "group": 78,
+      "dynamics": "0.006573928360",
+      "terminal": "0.003434530281",
+      "reference": "0.002014963298",
+      "surrogate_flow_residual_upper": "0.011994746545",
+      "exact_response_residual_upper": "0.051649603652"
+    },
+    {
+      "group": 79,
+      "dynamics": "0.006624998547",
+      "terminal": "0.003456361705",
+      "reference": "0.001995635997",
+      "surrogate_flow_residual_upper": "0.012044910431",
+      "exact_response_residual_upper": "0.051699767538"
+    },
+    {
+      "group": 80,
+      "dynamics": "0.006676592351",
+      "terminal": "0.003478034600",
+      "reference": "0.001976123044",
+      "surrogate_flow_residual_upper": "0.012096365524",
+      "exact_response_residual_upper": "0.051751222631"
+    },
+    {
+      "group": 81,
+      "dynamics": "0.006728717547",
+      "terminal": "0.003499544741",
+      "reference": "0.001956426055",
+      "surrogate_flow_residual_upper": "0.012149128275",
+      "exact_response_residual_upper": "0.051803985379"
+    },
+    {
+      "group": 82,
+      "dynamics": "0.006781377035",
+      "terminal": "0.003520889364",
+      "reference": "0.001936546556",
+      "surrogate_flow_residual_upper": "0.012203216639",
+      "exact_response_residual_upper": "0.051858073747"
+    },
+    {
+      "group": 83,
+      "dynamics": "0.006835517367",
+      "terminal": "0.003542064608",
+      "reference": "0.001916485797",
+      "surrogate_flow_residual_upper": "0.012258647255",
+      "exact_response_residual_upper": "0.051913504362"
+    },
+    {
+      "group": 84,
+      "dynamics": "0.006891370465",
+      "terminal": "0.003563065961",
+      "reference": "0.001896245364",
+      "surrogate_flow_residual_upper": "0.012315436559",
+      "exact_response_residual_upper": "0.051970293667"
+    },
+    {
+      "group": 85,
+      "dynamics": "0.006948955734",
+      "terminal": "0.003583889662",
+      "reference": "0.001875826815",
+      "surrogate_flow_residual_upper": "0.012373601732",
+      "exact_response_residual_upper": "0.052028458835"
+    },
+    {
+      "group": 86,
+      "dynamics": "0.007008292206",
+      "terminal": "0.003604531773",
+      "reference": "0.001855254868",
+      "surrogate_flow_residual_upper": "0.012433182423",
+      "exact_response_residual_upper": "0.052088039530"
+    },
+    {
+      "group": 87,
+      "dynamics": "0.007069398287",
+      "terminal": "0.003624988630",
+      "reference": "0.001834510121",
+      "surrogate_flow_residual_upper": "0.012494174204",
+      "exact_response_residual_upper": "0.052149031311"
+    },
+    {
+      "group": 88,
+      "dynamics": "0.007132288285",
+      "terminal": "0.003645256379",
+      "reference": "0.001813607130",
+      "surrogate_flow_residual_upper": "0.012556602439",
+      "exact_response_residual_upper": "0.052211459546"
+    },
+    {
+      "group": 89,
+      "dynamics": "0.007196985903",
+      "terminal": "0.003665330268",
+      "reference": "0.001792535465",
+      "surrogate_flow_residual_upper": "0.012620475242",
+      "exact_response_residual_upper": "0.052275332346"
+    },
+    {
+      "group": 90,
+      "dynamics": "0.007263516576",
+      "terminal": "0.003685206988",
+      "reference": "0.001771274622",
+      "surrogate_flow_residual_upper": "0.012685793776",
+      "exact_response_residual_upper": "0.052340650883"
+    },
+    {
+      "group": 91,
+      "dynamics": "0.007331894890",
+      "terminal": "0.003704882320",
+      "reference": "0.001749844186",
+      "surrogate_flow_residual_upper": "0.012752588401",
+      "exact_response_residual_upper": "0.052407445505"
+    },
+    {
+      "group": 92,
+      "dynamics": "0.007402140212",
+      "terminal": "0.003724351612",
+      "reference": "0.001728270470",
+      "surrogate_flow_residual_upper": "0.012820900166",
+      "exact_response_residual_upper": "0.052475757273"
+    },
+    {
+      "group": 93,
+      "dynamics": "0.007474271967",
+      "terminal": "0.003743611622",
+      "reference": "0.001706546533",
+      "surrogate_flow_residual_upper": "0.012890738299",
+      "exact_response_residual_upper": "0.052545595406"
+    },
+    {
+      "group": 94,
+      "dynamics": "0.007548309489",
+      "terminal": "0.003762657514",
+      "reference": "0.001684659695",
+      "surrogate_flow_residual_upper": "0.012962104574",
+      "exact_response_residual_upper": "0.052616961681"
+    },
+    {
+      "group": 95,
+      "dynamics": "0.007624272213",
+      "terminal": "0.003781485158",
+      "reference": "0.001662623934",
+      "surrogate_flow_residual_upper": "0.013035028248",
+      "exact_response_residual_upper": "0.052689885355"
+    },
+    {
+      "group": 96,
+      "dynamics": "0.007702179410",
+      "terminal": "0.003800090906",
+      "reference": "0.001640470482",
+      "surrogate_flow_residual_upper": "0.013109556161",
+      "exact_response_residual_upper": "0.052764413265"
+    },
+    {
+      "group": 97,
+      "dynamics": "0.007782050467",
+      "terminal": "0.003818469486",
+      "reference": "0.001618164205",
+      "surrogate_flow_residual_upper": "0.013185667297",
+      "exact_response_residual_upper": "0.052840524404"
+    },
+    {
+      "group": 98,
+      "dynamics": "0.007863904490",
+      "terminal": "0.003836617030",
+      "reference": "0.001595763587",
+      "surrogate_flow_residual_upper": "0.013263435418",
+      "exact_response_residual_upper": "0.052918292525"
+    },
+    {
+      "group": 99,
+      "dynamics": "0.007947760657",
+      "terminal": "0.003854529904",
+      "reference": "0.001573254947",
+      "surrogate_flow_residual_upper": "0.013342862365",
+      "exact_response_residual_upper": "0.052997719472"
+    },
+    {
+      "group": 100,
+      "dynamics": "0.008033638170",
+      "terminal": "0.003872202380",
+      "reference": "0.001550670785",
+      "surrogate_flow_residual_upper": "0.013423994042",
+      "exact_response_residual_upper": "0.053078851149"
+    },
+    {
+      "group": 101,
+      "dynamics": "0.008121556073",
+      "terminal": "0.003889631286",
+      "reference": "0.001528037216",
+      "surrogate_flow_residual_upper": "0.013506872491",
+      "exact_response_residual_upper": "0.053161729599"
+    },
+    {
+      "group": 102,
+      "dynamics": "0.008211533222",
+      "terminal": "0.003906811804",
+      "reference": "0.001505396231",
+      "surrogate_flow_residual_upper": "0.013591553700",
+      "exact_response_residual_upper": "0.053246410807"
+    },
+    {
+      "group": 103,
+      "dynamics": "0.008303588466",
+      "terminal": "0.003923739344",
+      "reference": "0.001483223411",
+      "surrogate_flow_residual_upper": "0.013678527492",
+      "exact_response_residual_upper": "0.053333384599"
+    },
+    {
+      "group": 104,
+      "dynamics": "0.008397740431",
+      "terminal": "0.003940409536",
+      "reference": "0.001466717043",
+      "surrogate_flow_residual_upper": "0.013773006491",
+      "exact_response_residual_upper": "0.053427863598"
+    },
+    {
+      "group": 105,
+      "dynamics": "0.008494007707",
+      "terminal": "0.003956818218",
+      "reference": "0.001450212161",
+      "surrogate_flow_residual_upper": "0.013869340131",
+      "exact_response_residual_upper": "0.053524197238"
+    },
+    {
+      "group": 106,
+      "dynamics": "0.008592414255",
+      "terminal": "0.003972960503",
+      "reference": "0.001427647031",
+      "surrogate_flow_residual_upper": "0.013961480217",
+      "exact_response_residual_upper": "0.053616337324"
+    },
+    {
+      "group": 107,
+      "dynamics": "0.008692974245",
+      "terminal": "0.003988831721",
+      "reference": "0.001404354916",
+      "surrogate_flow_residual_upper": "0.014054773581",
+      "exact_response_residual_upper": "0.053709630689"
+    },
+    {
+      "group": 108,
+      "dynamics": "0.008795704319",
+      "terminal": "0.004007268534",
+      "reference": "0.001380735768",
+      "surrogate_flow_residual_upper": "0.014152475089",
+      "exact_response_residual_upper": "0.053807332196"
+    },
+    {
+      "group": 109,
+      "dynamics": "0.008900622403",
+      "terminal": "0.004025954146",
+      "reference": "0.001356823365",
+      "surrogate_flow_residual_upper": "0.014252319600",
+      "exact_response_residual_upper": "0.053907176707"
+    },
+    {
+      "group": 110,
+      "dynamics": "0.009007746152",
+      "terminal": "0.004044369547",
+      "reference": "0.001332653150",
+      "surrogate_flow_residual_upper": "0.014353841235",
+      "exact_response_residual_upper": "0.054008698342"
+    },
+    {
+      "group": 111,
+      "dynamics": "0.009117093087",
+      "terminal": "0.004062510710",
+      "reference": "0.001308260495",
+      "surrogate_flow_residual_upper": "0.014457088775",
+      "exact_response_residual_upper": "0.054111945879"
+    },
+    {
+      "group": 112,
+      "dynamics": "0.009228680551",
+      "terminal": "0.004080372951",
+      "reference": "0.001283632235",
+      "surrogate_flow_residual_upper": "0.014562061672",
+      "exact_response_residual_upper": "0.054216918779"
+    },
+    {
+      "group": 113,
+      "dynamics": "0.009342525502",
+      "terminal": "0.004097950499",
+      "reference": "0.001258823011",
+      "surrogate_flow_residual_upper": "0.014668825822",
+      "exact_response_residual_upper": "0.054323682929"
+    },
+    {
+      "group": 114,
+      "dynamics": "0.009458644735",
+      "terminal": "0.004115240202",
+      "reference": "0.001233795417",
+      "surrogate_flow_residual_upper": "0.014777357427",
+      "exact_response_residual_upper": "0.054432214535"
+    },
+    {
+      "group": 115,
+      "dynamics": "0.009577054696",
+      "terminal": "0.004132236427",
+      "reference": "0.001208605556",
+      "surrogate_flow_residual_upper": "0.014887723420",
+      "exact_response_residual_upper": "0.054542580528"
+    },
+    {
+      "group": 116,
+      "dynamics": "0.009697771582",
+      "terminal": "0.004148934757",
+      "reference": "0.001183238300",
+      "surrogate_flow_residual_upper": "0.014999920422",
+      "exact_response_residual_upper": "0.054654777529"
+    },
+    {
+      "group": 117,
+      "dynamics": "0.009820811457",
+      "terminal": "0.004165330632",
+      "reference": "0.001157693777",
+      "surrogate_flow_residual_upper": "0.015113959863",
+      "exact_response_residual_upper": "0.054768816970"
+    },
+    {
+      "group": 118,
+      "dynamics": "0.009946189661",
+      "terminal": "0.004181419313",
+      "reference": "0.001132084912",
+      "surrogate_flow_residual_upper": "0.015229965439",
+      "exact_response_residual_upper": "0.054884822546"
+    },
+    {
+      "group": 119,
+      "dynamics": "0.010073921381",
+      "terminal": "0.004197196846",
+      "reference": "0.001106435818",
+      "surrogate_flow_residual_upper": "0.015347972482",
+      "exact_response_residual_upper": "0.055002829589"
+    },
+    {
+      "group": 120,
+      "dynamics": "0.010204021646",
+      "terminal": "0.004212657239",
+      "reference": "0.001080667828",
+      "surrogate_flow_residual_upper": "0.015467911117",
+      "exact_response_residual_upper": "0.055122768221"
+    },
+    {
+      "group": 121,
+      "dynamics": "0.010336504640",
+      "terminal": "0.004227797149",
+      "reference": "0.001054749301",
+      "surrogate_flow_residual_upper": "0.015589760731",
+      "exact_response_residual_upper": "0.055244617838"
+    },
+    {
+      "group": 122,
+      "dynamics": "0.010471384562",
+      "terminal": "0.004242610278",
+      "reference": "0.001028651195",
+      "surrogate_flow_residual_upper": "0.015713499947",
+      "exact_response_residual_upper": "0.055368357055"
+    },
+    {
+      "group": 123,
+      "dynamics": "0.010608681215",
+      "terminal": "0.004257109247",
+      "reference": "0.001002396310",
+      "surrogate_flow_residual_upper": "0.015839177706",
+      "exact_response_residual_upper": "0.055494034813"
+    },
+    {
+      "group": 124,
+      "dynamics": "0.010748408839",
+      "terminal": "0.004271275803",
+      "reference": "0.000975990105",
+      "surrogate_flow_residual_upper": "0.015966794288",
+      "exact_response_residual_upper": "0.055621651395"
+    },
+    {
+      "group": 125,
+      "dynamics": "0.010890573084",
+      "terminal": "0.004285103164",
+      "reference": "0.000949433564",
+      "surrogate_flow_residual_upper": "0.016096356457",
+      "exact_response_residual_upper": "0.055751213564"
+    },
+    {
+      "group": 126,
+      "dynamics": "0.011035186030",
+      "terminal": "0.004298584864",
+      "reference": "0.000922723005",
+      "surrogate_flow_residual_upper": "0.016227866106",
+      "exact_response_residual_upper": "0.055882723213"
+    },
+    {
+      "group": 127,
+      "dynamics": "0.011182259210",
+      "terminal": "0.004311717527",
+      "reference": "0.000895853091",
+      "surrogate_flow_residual_upper": "0.016361326059",
+      "exact_response_residual_upper": "0.056016183167"
+    },
+    {
+      "group": 128,
+      "dynamics": "0.011331803617",
+      "terminal": "0.004324496697",
+      "reference": "0.000868827301",
+      "surrogate_flow_residual_upper": "0.016496746314",
+      "exact_response_residual_upper": "0.056151603422"
+    },
+    {
+      "group": 129,
+      "dynamics": "0.011483811689",
+      "terminal": "0.004336916820",
+      "reference": "0.000841642059",
+      "surrogate_flow_residual_upper": "0.016634128073",
+      "exact_response_residual_upper": "0.056288985181"
+    },
+    {
+      "group": 130,
+      "dynamics": "0.011638308896",
+      "terminal": "0.004348973579",
+      "reference": "0.000814297223",
+      "surrogate_flow_residual_upper": "0.016773476642",
+      "exact_response_residual_upper": "0.056428333749"
+    },
+    {
+      "group": 131,
+      "dynamics": "0.011795305318",
+      "terminal": "0.004360661560",
+      "reference": "0.000786791524",
+      "surrogate_flow_residual_upper": "0.016914794476",
+      "exact_response_residual_upper": "0.056569651580"
+    },
+    {
+      "group": 132,
+      "dynamics": "0.011954809699",
+      "terminal": "0.004371977523",
+      "reference": "0.000759121795",
+      "surrogate_flow_residual_upper": "0.017058083896",
+      "exact_response_residual_upper": "0.056712941003"
+    },
+    {
+      "group": 133,
+      "dynamics": "0.012116829827",
+      "terminal": "0.004382918051",
+      "reference": "0.000731325735",
+      "surrogate_flow_residual_upper": "0.017203386864",
+      "exact_response_residual_upper": "0.056858243972"
+    },
+    {
+      "group": 134,
+      "dynamics": "0.012281372657",
+      "terminal": "0.004393786437",
+      "reference": "0.000703251234",
+      "surrogate_flow_residual_upper": "0.017350861454",
+      "exact_response_residual_upper": "0.057005718561"
+    },
+    {
+      "group": 135,
+      "dynamics": "0.012448444327",
+      "terminal": "0.004404271133",
+      "reference": "0.000674851561",
+      "surrogate_flow_residual_upper": "0.017500155666",
+      "exact_response_residual_upper": "0.057155012773"
+    },
+    {
+      "group": 136,
+      "dynamics": "0.012618050510",
+      "terminal": "0.004414368214",
+      "reference": "0.000646141624",
+      "surrogate_flow_residual_upper": "0.017651286016",
+      "exact_response_residual_upper": "0.057306143124"
+    },
+    {
+      "group": 137,
+      "dynamics": "0.012790195854",
+      "terminal": "0.004424071719",
+      "reference": "0.000617249229",
+      "surrogate_flow_residual_upper": "0.017804378953",
+      "exact_response_residual_upper": "0.057459236061"
+    },
+    {
+      "group": 138,
+      "dynamics": "0.012964884235",
+      "terminal": "0.004433378293",
+      "reference": "0.000588176687",
+      "surrogate_flow_residual_upper": "0.017959437384",
+      "exact_response_residual_upper": "0.057614294491"
+    },
+    {
+      "group": 139,
+      "dynamics": "0.013142118615",
+      "terminal": "0.004442283482",
+      "reference": "0.000558923365",
+      "surrogate_flow_residual_upper": "0.018116459059",
+      "exact_response_residual_upper": "0.057771316163"
+    },
+    {
+      "group": 140,
+      "dynamics": "0.013321901213",
+      "terminal": "0.004450781229",
+      "reference": "0.000529486410",
+      "surrogate_flow_residual_upper": "0.018275437229",
+      "exact_response_residual_upper": "0.057930294337"
+    },
+    {
+      "group": 141,
+      "dynamics": "0.013504232843",
+      "terminal": "0.004458869027",
+      "reference": "0.000499867728",
+      "surrogate_flow_residual_upper": "0.018436372376",
+      "exact_response_residual_upper": "0.058091229484"
+    },
+    {
+      "group": 142,
+      "dynamics": "0.013689113938",
+      "terminal": "0.004466540429",
+      "reference": "0.000470064436",
+      "surrogate_flow_residual_upper": "0.018599255246",
+      "exact_response_residual_upper": "0.058254112350"
+    },
+    {
+      "group": 143,
+      "dynamics": "0.013876543585",
+      "terminal": "0.004473792520",
+      "reference": "0.000440078516",
+      "surrogate_flow_residual_upper": "0.018764084072",
+      "exact_response_residual_upper": "0.058418941175"
+    },
+    {
+      "group": 144,
+      "dynamics": "0.014066519625",
+      "terminal": "0.004480619374",
+      "reference": "0.000416233510",
+      "surrogate_flow_residual_upper": "0.018930887676",
+      "exact_response_residual_upper": "0.058585744783"
+    },
+    {
+      "group": 145,
+      "dynamics": "0.014259039282",
+      "terminal": "0.004487017642",
+      "reference": "0.000408603058",
+      "surrogate_flow_residual_upper": "0.019099758721",
+      "exact_response_residual_upper": "0.058754615825"
+    },
+    {
+      "group": 146,
+      "dynamics": "0.014454099280",
+      "terminal": "0.004492982350",
+      "reference": "0.000401024900",
+      "surrogate_flow_residual_upper": "0.019270546026",
+      "exact_response_residual_upper": "0.058925403129"
+    },
+    {
+      "group": 147,
+      "dynamics": "0.014651999313",
+      "terminal": "0.004498509228",
+      "reference": "0.000393502850",
+      "surrogate_flow_residual_upper": "0.019443546534",
+      "exact_response_residual_upper": "0.059098403641"
+    },
+    {
+      "group": 148,
+      "dynamics": "0.014852749679",
+      "terminal": "0.004503593289",
+      "reference": "0.000386040919",
+      "surrogate_flow_residual_upper": "0.019618899658",
+      "exact_response_residual_upper": "0.059273756761"
+    },
+    {
+      "group": 149,
+      "dynamics": "0.015056359651",
+      "terminal": "0.004508231625",
+      "reference": "0.000378643251",
+      "surrogate_flow_residual_upper": "0.019796614015",
+      "exact_response_residual_upper": "0.059451471123"
+    },
+    {
+      "group": 150,
+      "dynamics": "0.015262837802",
+      "terminal": "0.004512432697",
+      "reference": "0.000377005339",
+      "surrogate_flow_residual_upper": "0.019976662226",
+      "exact_response_residual_upper": "0.059631519329"
+    },
+    {
+      "group": 151,
+      "dynamics": "0.015472192053",
+      "terminal": "0.004516801209",
+      "reference": "0.000404579579",
+      "surrogate_flow_residual_upper": "0.020159556841",
+      "exact_response_residual_upper": "0.059814413945"
+    },
+    {
+      "group": 152,
+      "dynamics": "0.015684429554",
+      "terminal": "0.004557069925",
+      "reference": "0.000432463255",
+      "surrogate_flow_residual_upper": "0.020381039076",
+      "exact_response_residual_upper": "0.060035896184"
+    },
+    {
+      "group": 153,
+      "dynamics": "0.015899556777",
+      "terminal": "0.004637708705",
+      "reference": "0.000460653012",
+      "surrogate_flow_residual_upper": "0.020645633347",
+      "exact_response_residual_upper": "0.060300490462"
+    },
+    {
+      "group": 154,
+      "dynamics": "0.016117579219",
+      "terminal": "0.004719079527",
+      "reference": "0.000489156865",
+      "surrogate_flow_residual_upper": "0.020932711187",
+      "exact_response_residual_upper": "0.060587568302"
+    },
+    {
+      "group": 155,
+      "dynamics": "0.016338501566",
+      "terminal": "0.004801190157",
+      "reference": "0.000517978816",
+      "surrogate_flow_residual_upper": "0.021272520714",
+      "exact_response_residual_upper": "0.060927377829"
+    },
+    {
+      "group": 156,
+      "dynamics": "0.016562327605",
+      "terminal": "0.004884049903",
+      "reference": "0.000547192353",
+      "surrogate_flow_residual_upper": "0.021616244105",
+      "exact_response_residual_upper": "0.061271101220"
+    },
+    {
+      "group": 157,
+      "dynamics": "0.016789060440",
+      "terminal": "0.004967667483",
+      "reference": "0.000576734046",
+      "surrogate_flow_residual_upper": "0.021963894577",
+      "exact_response_residual_upper": "0.061618751685"
+    },
+    {
+      "group": 158,
+      "dynamics": "0.017018698710",
+      "terminal": "0.005052052114",
+      "reference": "0.000606629010",
+      "surrogate_flow_residual_upper": "0.022315503406",
+      "exact_response_residual_upper": "0.061970360513"
+    },
+    {
+      "group": 159,
+      "dynamics": "0.017251240876",
+      "terminal": "0.005137215352",
+      "reference": "0.000636873485",
+      "surrogate_flow_residual_upper": "0.022671381876",
+      "exact_response_residual_upper": "0.062326238983"
+    }
+  ]
+}

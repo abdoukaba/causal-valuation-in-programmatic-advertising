@@ -1,0 +1,17 @@
+{
+  "nodes": 21,
+  "steps": 60,
+  "dimension": 120,
+  "bits": 128,
+  "radius_power": 9,
+  "center_defect_upper": "0.000000000000005151",
+  "jacobian_norm_upper": "0.996800215130",
+  "invariant_and_contracting": true,
+  "interior_events": 4560,
+  "multicell_events": 103,
+  "posterior_endpoints": "exact identities for every time and action",
+  "preconditioner": "identity",
+  "elapsed_seconds": 7.53,
+  "root_coordinate_distance_upper": "0.000000000001609695",
+  "root_tv_distance_upper": "0.000000000003219390"
+}

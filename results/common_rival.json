@@ -1,0 +1,16 @@
+{
+ "against_shannon_equilibrium": {
+  "shannon_policy": 0.016093069542219757,
+  "anchored_policy": 0.04013622311008155,
+  "always_h": 0.04327394010798268,
+  "always_2h": -0.02117586101604185,
+  "best_response": 0.04348223576612797
+ },
+ "against_anchored_equilibrium": {
+  "shannon_policy": 0.020892575573761694,
+  "anchored_policy": 0.04507525304094472,
+  "always_h": 0.04817558846296971,
+  "always_2h": -0.011541647083049838,
+  "best_response": 0.04833349538055944
+ }
+}

@@ -1,0 +1,14 @@
+{
+  "belief_nodes": 21,
+  "time_steps": 60,
+  "eta": 0.45,
+  "entropy_weight": 0.05,
+  "expected_auctions": 2.25,
+  "initial_budget": 0.2,
+  "mean_terminal_budget": 0.14819150888902186,
+  "fraction_of_budget_remaining": 0.7409575444451092,
+  "probability_budget_exhausted": 0.04416334158971142,
+  "equilibrium_profit": 0.007753450923690871,
+  "equilibrium_residual": 9.135275869098791e-11,
+  "method": "floating-point equilibrium on the stated grid; not interval-certified"
+}

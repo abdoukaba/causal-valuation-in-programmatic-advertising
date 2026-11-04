@@ -1,0 +1,8 @@
+{
+  "case": "composite",
+  "eta": "9/20",
+  "numerator": 695440303,
+  "denominator": 1000000000,
+  "below_one": true,
+  "approach": "rational Taylor brackets and max stage payoff plus 1.1 times entropy temperature"
+}

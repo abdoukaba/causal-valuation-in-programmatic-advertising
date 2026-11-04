@@ -1,0 +1,15 @@
+{
+  "numerator": 961609277107,
+  "denominator": 1000000000000,
+  "bound": "0.961609277107",
+  "strictly_below_one": true,
+  "scope": "aggregation of supplied upper-bound ledger only"
+}
+{
+  "numerator": 974202142743,
+  "denominator": 1000000000000,
+  "bound": "0.974202142743",
+  "strictly_below_one": true,
+  "scope": "aggregation of supplied upper-bound ledger only"
+}
+{"belief_perspective_identity": "0", "rival_perspective_identity": "0"}

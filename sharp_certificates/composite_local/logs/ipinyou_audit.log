@@ -1,0 +1,4 @@
+{'case': 'ipinyou', 'method': 'fem', 'eta': '0.45', 'precision': 160, 'time_cells': 320, 'belief_pieces': 12, 'max_HJB': 0.0007288349, 'value_error_at_zero': 0.0005914843, 'witness_policy_fixed_flow_regret': 2.7987e-06, 'policy_coupling': 0.0148919209, 'max_reference': 0.0004205839, 'max_moment_closure': 0.0071559169, 'step_residual_TV': 0.0167181007, 'displayed_flow_transfer': 9.56453e-05, 'simple_distance_TV': 0.0797178886}
+{'case': 'ipinyou', 'method': 'pinn', 'eta': '0.45', 'precision': 160, 'time_cells': 320, 'belief_pieces': 12, 'max_HJB': 0.0007265, 'value_error_at_zero': 0.0005916837, 'witness_policy_fixed_flow_regret': 2.7949e-06, 'policy_coupling': 0.0148864353, 'max_reference': 0.0004192722, 'max_moment_closure': 0.0071558376, 'step_residual_TV': 0.0167106048, 'displayed_flow_transfer': 9.49715e-05, 'simple_distance_TV': 0.0796815145}
+0.0517736002
+0.0517471716

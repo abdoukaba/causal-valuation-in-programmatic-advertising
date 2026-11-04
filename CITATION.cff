@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Please cite this software when using the replication code."
+type: software
+title: "Causal Valuation in Programmatic Advertising: A Mean-Field Analysis (replication code)"
+authors:
+  - family-names: Kaba
+    given-names: Abdou
+    affiliation: "Department of Economics, University of San Francisco"
+version: "1.2.5"
+license: MIT
+abstract: "Replication code, fitted inputs, numerical results and verification ledgers for a mean-field model of causal valuation in first-price advertising auctions."
+keywords:
+  - programmatic advertising
+  - causal valuation
+  - mean-field games
+  - first-price auctions
+  - reproducibility

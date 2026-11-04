@@ -1,0 +1,1 @@
+{'groups': 80, 'parts': 96, 'bits': 224, 'scope': 'fixed FEM midpoint rival flow, full continuous time and belief, max TV over all times', 'policy_coupling_upper': '0.0396548571', 'exact_response_residual_TV_upper': '0.074080833752', 'frozen_policy_residual_TV_upper': '0.034425976623'}

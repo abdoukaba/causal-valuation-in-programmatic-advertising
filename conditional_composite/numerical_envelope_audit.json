@@ -1,0 +1,42 @@
+{
+  "scope": "floating-point derivative-of-value diagnostic only; not part of the proof",
+  "belief_nodes": 101,
+  "time_steps": 1000,
+  "checks": [
+    {
+      "flow": "vertex_0",
+      "minimum_margin_nonzero_budget": 0.0003522880976107312,
+      "all_within": true
+    },
+    {
+      "flow": "vertex_1",
+      "minimum_margin_nonzero_budget": 0.00036714915539602655,
+      "all_within": true
+    },
+    {
+      "flow": "vertex_2",
+      "minimum_margin_nonzero_budget": 0.0005198485622194549,
+      "all_within": true
+    },
+    {
+      "flow": "vertex_3",
+      "minimum_margin_nonzero_budget": 0.0011457979235957177,
+      "all_within": true
+    },
+    {
+      "flow": "vertex_4",
+      "minimum_margin_nonzero_budget": 0.0026809738884392142,
+      "all_within": true
+    },
+    {
+      "flow": "vertex_5",
+      "minimum_margin_nonzero_budget": 0.0026107839408922306,
+      "all_within": true
+    },
+    {
+      "flow": "rapid_switch",
+      "minimum_margin_nonzero_budget": 0.0012951567589701285,
+      "all_within": true
+    }
+  ]
+}

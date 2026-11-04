@@ -1,0 +1,14 @@
+{
+  "center_output_max_difference": 3.3306690738754696e-16,
+  "all_jacobian_columns": 120,
+  "fd_max_entry_error_by_step": {
+    "2e-06": 2.9254485485685983e-10,
+    "5e-07": 9.429577154168784e-10
+  },
+  "two_off_center_max_differences": [
+    2.7755575615628914e-16,
+    4.440892098500626e-16
+  ],
+  "jacobian_infinity_norm_at_center_float": 0.18349633955187464,
+  "check": "finite differences and original quotient-interpolation implementation; diagnostic only"
+}

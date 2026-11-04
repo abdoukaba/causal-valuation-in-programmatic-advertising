@@ -1,0 +1,243 @@
+% Requires amsmath, amssymb and booktabs. Self-contained insertion.
+% In a manuscript, leave the optional report breaks undefined.
+\providecommand{\CGpage}{}
+\subsection{A verified local equilibrium on the composite auction grid}
+\label{sec:composite-dynamic-grid}
+At endogenous share $\eta=0.45$, the dynamic first-price auction on the
+21-belief-node, 60-time-step grid has exactly one equilibrium in an explicitly
+specified neighborhood. The rounded finite-element (FEM) and neural (PINN)
+paths, sampled at the 60 grid times, both belong to this neighborhood.
+A separate calculation for the continuous-time, continuous-belief response
+bounds the residuals of their published paths by $0.062785$ in total variation
+(TV). Existence for the continuous composite follows from the previously
+established Schauder argument. Its local and global uniqueness remain open.
+
+The composite uses the iPinYou four-point background bid law
+$(0.4023,0.2553,0.0198,0.3226)$ on $(0,.05,.10,.15)$, the fitted score
+scale $.0110250693063193$, and the earlier Criteo-based regime specification.
+Its offsets are approximately $(.071211,-.071211)$ and the prior probability
+of regime one is $.4999294686139624$. The payoff array and exact decimals
+are frozen in the replication files. The unit horizon, signal volatility $.2$,
+opportunity rate $2.25$, five budget levels, feasible bids in $\{0,.05,.10\}$,
+and Shannon temperature $.05$ match the archived model. The two data sources
+supply separate inputs. The composite assumes a common structural game and
+a monetary interpretation of the regime values. The equilibrium claims
+are conditional on these choices.
+
+\paragraph{Location of the grid equilibrium.}
+Let $x$ record the first two bid shares, abstention and the low bid, at each
+time. The high-bid share is $1-x_0-x_1$. Let $c$ be the rational center
+archived as 120 integers divided by $10^{14}$ and set
+$X_r=\{x:\|x-c\|_\infty\leq r\}$. On the primary grid, $X_{1/512}$
+belongs to the product of probability simplices. The verified Lipschitz bound
+for the response $\Phi_h$ on this cube is $0.996801$ and the center
+defect is below $5.151\times10^{-15}$. A nested smaller cube gives
+$\|x^*_h-c\|_\infty<6.31\times 10^{-15}$ for the same equilibrium.
+The TV error of the center on this grid is below $1.262\times10^{-14}$.
+The two sampled solver paths have maximum coordinate deviations from $c$
+below $0.0016472$, compared with $1/512=0.001953125$.
+Picard iteration under $\Phi_h$ from either sampled path converges to
+this equilibrium.
+
+\begin{table}[htbp]\centering\small
+\caption{Neighborhood tests for the 120-coordinate dynamic response. Each
+gain is an outward-rounded upper bound in the coordinate sup norm. The
+crossing count records interior posterior events for which the interval
+test admits more than one interpolation cell, out of 4,560 events.}
+\label{tab:cg-radii}
+\begin{tabular}{@{}lrrl@{}}\toprule
+Cube radius & Gain bound & Possible crossings & Inclusion test\\\midrule
+$2^{-28}$ & 0.183497 & 0 & Passed\\
+$2^{-16}$ & 0.185548 & 0 & Passed\\
+$2^{-12}$ & 0.290691 & 11 & Passed\\
+$2^{-9}$  & 0.996801 & 103 & Passed\\
+$2^{-8}$  & 1.913293 & 166 & Inconclusive\\\bottomrule
+\end{tabular}
+\end{table}
+
+\CGpage
+\subsubsection{The interval proof for the dynamic grid}
+For a belief $p$, event likelihoods $\ell_0,\ell_1$ conditional on regime,
+and mesh nodes $k/(n-1)$, write $P=(1-p)\ell_0+p\ell_1$ and $J=p\ell_1$.
+For a loss, use the conditional loss probabilities in place of the win
+probabilities. If $J/P$ lies in cell $k$, the probability-weighted nodal
+interpolation coefficients are
+\[
+ (k+1)P-(n-1)J,\qquad (n-1)J-kP.
+\]
+Both are affine in the two free coordinates of the rival bid law at that
+time. Win and loss lead to their corresponding budget levels.
+At $p=0,1$ the posterior stays at the endpoint. For interior beliefs an
+interval sign test identifies all admissible cells. When the signs do not
+select a single cell, the verifier takes the interval hull of every
+admissible value and slope, including the zero slope at an inactive node.
+This handles changes of interpolation cell inside the cube.
+
+Let $K_a$ be the resulting jump kernel, $g_a$ the current expected net
+reward, $j=\lambda\Delta t$, and $H=(1-j)I+\Delta t L_h$ the diffusion
+and no-arrival matrix. Each diffusion rate to an adjacent interior belief
+node is $[.2p(1-p)]^2/(2h_p^2)$, where $h_p=1/(n-1)$.
+For the vector $V^+$ at the next time, set
+$S_a=g_a+K_aV^+$ and $\pi_a=\exp(S_a/\varepsilon)/
+\sum_{a'\text{ feasible}}\exp(S_{a'}/\varepsilon)$. Writing $m$ for
+the current state masses, the discrete equations are
+\begin{align*}
+ V &= HV^+ + j\varepsilon\log\sum_{a\text{ feasible}}\exp(S_a/\varepsilon),\\
+ m^+ &= H^\top m+j\sum_a K_a^\top(m\pi_a),\qquad
+ (\Phi_h)_a=\sum_i m_i\pi_{ia}.
+\end{align*}
+Products inside the mass update are componentwise. The initial mass splits
+the exact prior between its adjacent nodes at full budget, and $V_T=0$.
+The mathematical scheme sums over feasible actions. The archived numerical
+implementation gives infeasible actions a sentinel score that underflows to
+zero in its binary64 softmax.
+
+\paragraph{Verification.}
+Differentiating the backward recursion gives
+$dS_a=dg_a+(dK_a)V^++K_a\,dV^+$ and
+$d\pi_a=(\pi_a/\varepsilon)(dS_a-\sum_k\pi_k dS_k)$.
+Differentiating the forward equation propagates $dm$, $dK_a$, and
+$d\pi_a$. For each cube the implementation encloses all entries of these
+derivatives with ball arithmetic. The largest row sum of entrywise absolute
+upper bounds majorizes the induced infinity norm. Along line segments the
+map is Lipschitz and piecewise smooth. The cell formulas cover the
+one-sided slopes, so the same bound applies across cell boundaries.
+Writing $Y=\|\Phi_h(c)-c\|_\infty$ and $Z$ for this row-sum bound, the
+verified inequalities $Z<1$ and $Y+Zr<r$ imply strict inclusion and
+contraction. Banach's theorem yields local uniqueness and the error
+bound $Y/(1-Z)$. This is also the identity-preconditioned test for
+$F_h=I-\Phi_h$. The result leaves open the possibility of discrete
+equilibria outside the certified cube.
+
+\paragraph{Refinement.}
+With the same exact inputs, the $11\times30$, $21\times60$, and
+$31\times120$ grids have respective verified local gains below $0.182398$,
+$0.183497$, and $0.183983$ at radius $2^{-28}$. Their centers lie within
+$0.003293$, $0.001647$, and $0.000821$ TV of the FEM path at the
+respective left-endpoint grid times. On the finest grid, a larger cube of radius
+$2^{-10}$ also contains both sampled paths. Its gain bound is $0.678686$
+with 59 possible interpolation crossings among 13,920 events.
+A separate 75-decimal-digit interval
+evaluation using posterior quotients verified the primary center defect.
+Central differences of the archived solver checked all 120 derivative
+columns, with largest entrywise discrepancies below $9.5\times10^{-10}$
+at the two tested increments.
+
+\CGpage
+\subsubsection{A continuous-time residual from backward test functions}
+Let $\bar q$ be the archived 320-cell FEM midpoint flow and $h_{ba}(p,t)$
+the Gibbs policy induced by the archived affine value witness with scores
+frozen at each cell midpoint. For any terminal action $a$ and target time,
+use a backward test $U_b(t,p)=(1-p)u_{b0}(t)+pu_{b1}(t)$, piecewise
+linear in time. With $p_0(p)=1-p$, $p_1(p)=p$ and conditional win
+probabilities $\ell_{sk}(t)$ under $\bar q$, its exact generator is
+\[
+ (\mathcal L^h U)_b
+ =\lambda\sum_{k=1}^{\min(2,b)} h_{bk}(p,t)
+     \sum_{s=0}^1 p_s(p)\ell_{sk}(t)
+       [u_{b-k,s}(t)-u_{bs}(t)].
+\]
+Bayesian conditioning times the event probability gives this identity.
+The martingale belief diffusion has zero drift on an affine test.
+Thus the computation bounds the continuous law, including all posterior
+jumps, without discretizing its forward density.
+
+Partition the unit horizon into $G$ output blocks. For each block
+and each action choose a separate test, constant in time throughout its
+target block. Earlier coefficients approximate the backward equation.
+They are proposed in binary64 and then rounded to integers at scale
+$10^{12}$. For any target time $t$ in its block, Dynkin's identity gives
+\begin{align*}
+ |\mathbb E h_{B_ta}(P_t,t)-\bar q_a(t)| \leq {}&
+ |U_4(0,p_{\rm prior})-\bar q_a(t)|
+  +\sup_{b,p}|h_{ba}(p,t)-U_b(t,p)|\\
+ &+\int_0^t\sup_{b,p}|\partial_s U_b(s,p)+\mathcal L^h U_b(s,p)|\,ds.
+\end{align*}
+For each target block the integral includes its entire length in the upper
+bound. Within earlier blocks both endpoint coefficients are tested.
+Conditional on fixed auction primitives and policy within each fine
+time cell, the residual is affine in the time interpolation coefficient.
+Interval enclosures cover all fine cells in each block and all beliefs
+in each listed subinterval. The certificate takes the maximum over the three
+action coordinates, which equals TV for a difference of two three-action
+probabilities. The independently replayed Bellman comparison and
+common-arrival coupling bound the output effect of replacing the surrogate
+policy with the true optimal policy by $0.0396548571$ TV.
+
+\begin{table}[htbp]\centering\small
+\caption{Uniform residual upper bounds for the continuous response to the
+same 320-cell midpoint input. Verification covers every time and belief.
+All entries are rounded upward.}\label{tab:cg-dual}
+\begin{tabular}{@{}rrcc@{}}\toprule
+Output blocks & Belief intervals & Frozen-policy residual & Optimal-response residual\\\midrule
+20 & 24 & 0.108050 & 0.147705\\
+40 & 48 & 0.059274 & 0.098929\\
+80 & 96 & 0.034426 & 0.074081\\
+160 & 160 & 0.022672 & 0.062327\\\bottomrule
+\end{tabular}
+\end{table}
+The earlier uniform FEM step-flow bound was $0.370236$.
+The new bound quantifies population consistency with a full optimal
+response to the specified candidate flow.
+
+\CGpage
+\subsubsection{Transfer to the reported paths and scope of the result}
+For paths $q$ in a convex box where the continuous response has
+unweighted TV Lipschitz upper bound $L$, the triangle inequality gives
+\[
+ \|\Phi(q)-q\|_{\infty,\mathrm{TV}}\leq
+ \|\Phi(\bar q)-\bar q\|_{\infty,\mathrm{TV}}+
+ (1+L)\|q-\bar q\|_{\infty,\mathrm{TV}} .
+\]
+The comparison covers continuous and piecewise-constant rival flows with
+the same uniform bounds on the primitives. We used the earlier positive
+backward and forward comparison on two constant coordinate boxes.
+They enclose, respectively, the FEM path with uniform TV margins of
+$.001$ and $.01$. Integer rounding of the box faces enlarges them.
+The unweighted gains are below $2.151217$ and $2.177967$.
+Exact rational interpolation checks membership of the respective paths
+and measures their distances to the midpoint candidate, including both
+traces at step boundaries. For a discrete root, we linearly interpolate
+the grid ordinates and extend the final ordinate constantly to time one.
+We also include the verified TV uncertainty of the root.
+
+\begin{table}[htbp]\centering\small
+\caption{Transfer of the continuous-game residual. The last column bounds
+the change caused by one exact best-response update. Values are rounded
+upward in maximum-over-time TV.}\label{tab:cg-transfer}
+\begin{tabular}{@{}lrr@{}}\toprule
+Input path & Distance to FEM midpoint flow & Continuous residual\\\midrule
+Published linear FEM           & 0.000146 & 0.062784\\
+Published linear PINN          & 0.000146 & 0.062785\\
+Local grid root, $11\times30$  & 0.005189 & 0.078814\\
+Local grid root, $21\times60$  & 0.002555 & 0.070444\\
+Local grid root, $31\times120$ & 0.001218 & 0.066196\\\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Where uniqueness remains open.}
+The tighter weighted full-path comparison on the $.001$ band returned
+$2.065189$ after upward rounding, and the $.01$ band gave $2.089282$.
+Both exceed one. The earlier composite existence proof uses an
+instantaneous gain below $0.667786$, with the continuation and population
+held fixed during this part of the argument. Over the full horizon,
+perturbations also change values, filtering, and the distribution of
+budgets. We have no verified enclosure of the derivative on all time
+and belief modes that would transfer the grid uniqueness result.
+The residual bounds above give no certified distance to a particular
+continuous composite equilibrium. Failure of the gain test is compatible
+with a unique equilibrium.
+
+\paragraph{Allocation-only comparison and reproducibility.}
+For the distinct iPinYou allocation calibration at $\eta=.45$ with
+benchmark regime rewards, we recomputed the continuous comparison,
+the two Bellman and forward residuals, and the associated radii.
+The FEM radius was $0.0517736002$ and the PINN radius was $0.0517471716$,
+each relative to its unique continuous equilibrium. Both radius files
+matched the archived copies byte for byte. An integer-only replay also
+gave iPinYou unweighted bounds of $0.4676772289$ at $.30$ and
+$0.7900322858$ at $.45$. These are computational checks carried out
+within this study. An external review of the proofs and implementation
+remains outstanding. The auction logs do not identify private valuations,
+advertising incrementality in the composite game, or whether bidders
+played any computed equilibrium.

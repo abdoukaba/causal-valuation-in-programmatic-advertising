@@ -1,0 +1,38 @@
+{
+  "eta": ".60",
+  "epsilon": ".05",
+  "theta": "16",
+  "cells": 4000,
+  "weighted_upper_bound": "0.99639847304894549561771232315885319877",
+  "strictly_below_one": true,
+  "worst_cell": 2167,
+  "rounding": "Fraction exact-rational enclosures of exp, log3; 12-place outward constants; Decimal ROUND_CEILING at 38 digits, ROUND_FLOOR for positive denominators; exp(x)<=1/(1-x)",
+  "positive_weight": "w(t)=1+t on [0,1]",
+  "primitive_constants": {
+    "1": {
+      "gamma": "0.004315770687",
+      "omega": "0.124276514125",
+      "Lg": "0.018998104711",
+      "Lw": "0.024994792969",
+      "chi": "0.013693085809",
+      "ellmin": "0.44541082357",
+      "ellmax": "0.5446470553"
+    },
+    "2": {
+      "gamma": "0.006403019971",
+      "omega": "0.123136630434",
+      "Lg": "0.022312227471",
+      "Lw": "0.024994792969",
+      "chi": "0.013465464658",
+      "ellmin": "0.507326556957",
+      "ellmax": "0.605122588015"
+    }
+  },
+  "LPsi_upper": "1.064221488848",
+  "rplus_upper": "0.02474252988",
+  "ln3_upper": "1.098612288669",
+  "max_cdt_upper": "0.00014297026338697268393340912077090137752",
+  "max_gLdt_upper": "0.0000368274196120085683143311250",
+  "max_Lambda": "2.9891763066123341207725261019278614048",
+  "L0_upper": "0.059388831320700971876650465325748010952"
+}

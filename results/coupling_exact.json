@@ -1,0 +1,28 @@
+{
+ "n_vertices": 12,
+ "method": "market (Criteo offsets). Replaces the grid search of value_scale_coupling.py for the selection gap.",
+ "0.05": {
+  "profit_min": 0.004631506258912995,
+  "profit_max": 0.022090902571202897,
+  "profit_independent": 0.013360448704336935,
+  "win_prob_min": 0.22846583347441118,
+  "win_prob_max": 0.5196184248552852,
+  "gap_min": "-0.014333205951884090573",
+  "gap_max": "0.02046511404838601645",
+  "gap_independent": 0.006417567890546987,
+  "gap_min_rounded_down_4": -0.0144,
+  "gap_max_rounded_up_4": 0.0205
+ },
+ "0.1": {
+  "profit_min": -0.014928301471121168,
+  "profit_max": -0.003806249804153603,
+  "profit_independent": -0.00936768898023767,
+  "win_prob_min": 0.520056085008085,
+  "win_prob_max": 0.8460211454668675,
+  "gap_min": "0.0015554246643067219789",
+  "gap_max": "0.010989831475166669016",
+  "gap_independent": 0.006985726411991124,
+  "gap_min_rounded_down_4": 0.0015,
+  "gap_max_rounded_up_4": 0.011
+ }
+}

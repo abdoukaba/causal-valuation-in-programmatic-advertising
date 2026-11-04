@@ -1,0 +1,9 @@
+L_p 0.1736612425
+L_t 0.5750039219
+forward k 9 r_node so far 0.0021403858 mass rad 5.489935640494506e-36
+forward k 19 r_node so far 0.0021403858 mass rad 1.0157122227687918e-35
+forward k 29 r_node so far 0.0021403858 mass rad 1.4114487260306418e-35
+forward k 39 r_node so far 0.0021403858 mass rad 1.7455672424150605e-35
+forward k 49 r_node so far 0.0021403858 mass rad 2.026955949121304e-35
+forward k 59 r_node so far 0.0021403858 mass rad 2.1453601964454687e-35
+r_node 0.002140385809

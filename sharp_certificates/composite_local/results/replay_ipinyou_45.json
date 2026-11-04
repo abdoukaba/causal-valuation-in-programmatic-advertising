@@ -1,0 +1,8 @@
+{
+  "model": "auction",
+  "eta": ".45",
+  "cells": 40,
+  "numerator": 7900322858,
+  "denominator": 10000000000,
+  "strictly_below_one": true
+}

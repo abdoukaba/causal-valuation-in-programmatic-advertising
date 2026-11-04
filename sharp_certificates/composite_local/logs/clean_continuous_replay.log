@@ -1,0 +1,45 @@
+{'case': 'composite', 'method': 'fem', 'eta': '0.45', 'precision': 224, 'time_cells': 320, 'belief_pieces': 24, 'max_HJB': 0.002421718, 'value_error_at_zero': 0.0016571697, 'witness_policy_fixed_flow_regret': 2.33742e-05, 'policy_coupling': 0.0396548571, 'max_reference': 0.0049604108, 'max_moment_closure': 2.1989820652, 'step_residual_TV': 0.3701041668, 'displayed_flow_transfer': 0.0001452203}
+1000 40 [2.065188385578992207758246236758977081552308040404338337617332003 +/- 2.65e-64] [2.151216372106800603500556171244756526605717075267064244982015466 +/- 2.05e-64]
+10000 40 [2.089281022709681989443612361688927866366784229064596521875621691 +/- 1.55e-64] [2.177966643195074747724676826459136192855982485031974961799773653 +/- 5.04e-64]
+{'groups': 160, 'parts': 160, 'bits': 160, 'scope': 'fixed FEM midpoint rival flow, full continuous time and belief, max TV over all times', 'policy_coupling_upper': '0.0396548571', 'exact_response_residual_TV_upper': '0.062326238983', 'frozen_policy_residual_TV_upper': '0.022671381876'}
+{
+ "linear_FEM": {
+  "distance_to_FEM_step_TV_upper": "0.00014522017900000",
+  "unweighted_continuous_gain": "[2.151216372106800603500556171244756526605717075267064244982015466 +/- 2.05e-64]",
+  "extended_flow_continuous_residual_TV_upper": "0.062783859189"
+ },
+ "linear_PINN": {
+  "distance_to_FEM_step_TV_upper": "0.00014531777260000",
+  "unweighted_continuous_gain": "[2.151216372106800603500556171244756526605717075267064244982015466 +/- 2.05e-64]",
+  "extended_flow_continuous_residual_TV_upper": "0.062784166728"
+ },
+ "FD_11_30": {
+  "distance_to_FEM_step_TV_upper": "0.00518807647919533",
+  "unweighted_continuous_gain": "[2.177966643195074747724676826459136192855982485031974961799773653 +/- 5.04e-64]",
+  "extended_flow_continuous_residual_TV_upper": "0.078813772977",
+  "FEM_sample_coordinates_max_upper": "0.00329250920292667",
+  "FEM_sample_TV_max_upper": "0.00329250920292667",
+  "PINN_sample_coordinates_max_upper": "0.00329183449926000",
+  "PINN_sample_TV_max_upper": "0.00329183449926000"
+ },
+ "FD_21_60": {
+  "distance_to_FEM_step_TV_upper": "0.00255416437052262",
+  "unweighted_continuous_gain": "[2.177966643195074747724676826459136192855982485031974961799773653 +/- 5.04e-64]",
+  "extended_flow_continuous_residual_TV_upper": "0.070443288154",
+  "FEM_sample_coordinates_max_upper": "0.00164679923672667",
+  "FEM_sample_TV_max_upper": "0.00164679923672667",
+  "PINN_sample_coordinates_max_upper": "0.00164710749606000",
+  "PINN_sample_TV_max_upper": "0.00164710749606000"
+ },
+ "FD_31_120": {
+  "distance_to_FEM_step_TV_upper": "0.00121741796303178",
+  "unweighted_continuous_gain": "[2.177966643195074747724676826459136192855982485031974961799773653 +/- 5.04e-64]",
+  "extended_flow_continuous_residual_TV_upper": "0.066195152661",
+  "FEM_sample_coordinates_max_upper": "0.00082058292801334",
+  "FEM_sample_TV_max_upper": "0.00082058292801334",
+  "PINN_sample_coordinates_max_upper": "0.00082088901301000",
+  "PINN_sample_TV_max_upper": "0.00082088901301000"
+ }
+}
+All requested checks completed.
+Both continuous proof outputs match byte for byte.

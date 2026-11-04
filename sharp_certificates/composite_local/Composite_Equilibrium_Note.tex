@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,booktabs,microtype,graphicx,xcolor,fancyhdr}
+\usepackage[letterpaper,top=.77in,bottom=.77in,left=.9in,right=.9in,headheight=13pt]{geometry}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+\definecolor{ink}{HTML}{153C50}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\color{ink}Verified computation in partially observed auction games}
+\rhead{\small Research supplement}
+\lfoot{\small Abdou Kaba}\rfoot{\small\thepage}
+\newcommand{\CGpage}{\clearpage}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4.5pt}
+\renewcommand{\topfraction}{.9}\renewcommand{\textfraction}{.06}
+\begin{document}
+{\sffamily\color{ink}\small COMPUTATIONAL RESEARCH NOTE \hfill 1 NOVEMBER 2026}\par
+{\sffamily\color{ink}\bfseries\fontsize{21}{25}\selectfont Local uniqueness in a calibrated dynamic auction}\par
+{\large A grid certificate and continuous-game residual bounds}\par
+\input{Composite_Equilibrium_Section}
+\clearpage
+{\sffamily\color{ink}\bfseries\Large Numerical evidence and replication}\par
+\includegraphics[width=\linewidth]{comparison.pdf}
+\smallskip
+\textbf{Figure 1.} Left, bids in the composite model with 45\% endogenous competition.
+The lines give the archived FEM policy's population bid shares and the markers
+show selected grid-equilibrium shares. Right, the continuous-response upper
+bounds use the same rival flow. Each point is a new uniform verification.
+The continuous residual and the grid error describe different operators.\par
+\medskip
+\textbf{How to check the main result.}
+The replication archive includes the original data-calibrated finite-difference
+solver, both rounded candidate paths, exact centers, dual test coefficients,
+verifiers, JSON outputs and run logs. The README separates a short grid check
+from the full reproduction. A second interval implementation computes the
+primary center defect from posterior quotients. A numerical derivative check
+uses the archived solver's separate backward and forward routines. The included
+audit guide identifies where an independent reviewer can check each inequality.\par
+\medskip
+\textbf{Provenance.} A. Kaba, \emph{Verified Uniqueness and Certified
+Computation in Partially Observed Mean-Field Auction Games}, especially
+the discrete map in Section~8, and the companion \emph{Computing and
+enclosing the auction equilibrium} replication archive. The present
+experiment uses the archived calibration and numerical witnesses. New
+zero-finding, verification and continuum-residual calculations are distinguished
+in the source files. For the ball arithmetic backend see
+F. Johansson, \emph{IEEE Transactions on Computers} 66 (2017), 1281--1292.
+\url{https://doi.org/10.1109/TC.2017.2690633}.
+\end{document}

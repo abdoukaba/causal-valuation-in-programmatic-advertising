@@ -1,0 +1,17 @@
+outer 1 ([3139, 27527, 4475], [917795, 989711, 880660])
+outer 2 ([3831, 39051, 6091], [901155, 985851, 847628])
+outer 3 ([4178, 42409, 6570], [896588, 984674, 838796])
+outer 4 ([4299, 43378, 6707], [895303, 984335, 836293])
+outer 5 ([4334, 43658, 6747], [894934, 984236, 835571])
+outer 6 ([4344, 43738, 6759], [894828, 984208, 835363])
+outer 7 ([4347, 43762, 6762], [894797, 984200, 835303])
+outer 8 ([4348, 43769, 6763], [894788, 984197, 835285])
+building 80 [[4348, 43769, 6763], [894788, 984197, 835285]]
+kernel enclosure
+{"gain": "[2.06439113987838287689299047714 +/- 4.34e-31]", "strictly_below_one": false, "unweighted": "[2.687636680201437897111711 +/- 2.17e-25]"}
+Traceback (most recent call last):
+  File "/workspace/scratch/d713faa07cea/revision/code/range_certificate/conditional_arb.py", line 261, in <module>
+    verify_run(a.cells,8,a.outdir/'boxes.json',a.outdir/'gain.json',cfg)
+  File "/workspace/scratch/d713faa07cea/revision/code/range_certificate/conditional_arb.py", line 243, in verify_run
+    raise RuntimeError('The sufficient contraction test is inconclusive at these settings.')
+RuntimeError: The sufficient contraction test is inconclusive at these settings.

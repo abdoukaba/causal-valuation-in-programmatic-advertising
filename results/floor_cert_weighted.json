@@ -1,0 +1,45 @@
+{
+ "q0_censored": [
+  "0.410837",
+  "0.248854",
+  "0.017596",
+  "0.322713"
+ ],
+ "settings": "as Table ipinyou: w=1+alpha t, 2000 cells, top=450; fitted row as cert_weighted_fitted.py",
+ "bounds": {
+  "zeta=0.1,eta=0.3": {
+   "bound": 1.502305873555875,
+   "theta": "14",
+   "alpha": "2",
+   "certified": false
+  },
+  "zeta=0.1,eta=0.45": {
+   "bound": 2.3221525703169394,
+   "theta": "14",
+   "alpha": "2",
+   "certified": false
+  },
+  "zeta=0.2,eta=0.3": {
+   "bound": 0.7152967813150498,
+   "theta": "18",
+   "alpha": "1",
+   "certified": true
+  },
+  "zeta=0.2,eta=0.45": {
+   "bound": 1.0920784076794967,
+   "theta": "16",
+   "alpha": "1",
+   "certified": false
+  },
+  "zeta=0.0101,eta=0.3": {
+   "bound": "1.97e+7221",
+   "theta": "32",
+   "alpha": "2"
+  },
+  "zeta=0.0101,eta=0.45": {
+   "bound": "3.67e+7221",
+   "theta": "32",
+   "alpha": "2"
+  }
+ }
+}

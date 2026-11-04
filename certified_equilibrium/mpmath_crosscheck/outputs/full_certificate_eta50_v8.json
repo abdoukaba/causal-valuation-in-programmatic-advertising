@@ -1,0 +1,33 @@
+{
+  "source_interval_checks": {
+    "HJB": "0.0000120040688308027511925866",
+    "Lpi": "0.17286674897481187565",
+    "Ltime": "0.5715414455356616",
+    "ref_grid": "0.002140385808540462",
+    "ref_arg": [
+      0,
+      99,
+      0.002140385808540462
+    ]
+  },
+  "safe_upper_parameters": {
+    "HJB_residual": "0.0000121",
+    "policy_belief_Lipschitz": "0.173",
+    "policy_time_Lipschitz_at_prior": "0.6",
+    "posterior_quadratic_variation_slope": "0.0029",
+    "weighted_response_contraction": "0.820308",
+    "sample_reference_residual": "0.002141"
+  },
+  "error_terms": {
+    "sample_step_h": "0.00016666666666666666666666666666666666666666666666667",
+    "Poisson_uniformization_tail": "5.2734375000E-8",
+    "freeze_policy_error": "0.000056250000000000000000000000000000000000000000000003",
+    "within_step_bidflow_drift": "0.00085000000000000000000000000000000000000000000000002",
+    "frozen_prior_reference_residual_weighted": "0.0030473027343750000000000000000000000000000000000002",
+    "belief_dependence_coupling": "0.011645418895428364967579661437955962665488197349557",
+    "HJB_to_Gibbs_to_forward_term": "0.00039325",
+    "total_weighted_response_residual": "0.015085971629803364967579661437955962665488197349558",
+    "equilibrium_error_bound": "0.083954609163476197980876507790864160148967106769128",
+    "safe_rounded_error_bound": "0.085"
+  }
+}
