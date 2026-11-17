@@ -47,6 +47,8 @@ python verify_independent.py --full
 | Agreement with deposited independent bound and 8-box sequence | Exact at archived reported precision |
 | Original Arb 240-cell and 160-cell integer ledger replays | 0.961609277107 and 0.974202142743, both below 1 |
 | Original `conditional_composite/SHA256SUMS.txt` | Pass after rehashing the intentionally edited README |
+| Legacy `python -S verify_archive.py`, including all range cases | **PASS**, retaining two correctly inconclusive sensitivity cases |
+| Independent `--check` and `--smoke` after range manifest reconciliation | **PASS** |
 
 Fresh output saved in [`results/independent_global_160_reproduced.json`](results/independent_global_160_reproduced.json).
 The verifier uses `mpmath==1.3.0` and 55 interval decimal digits.
@@ -59,19 +61,21 @@ proof of the comparison inequalities is still required. No formal verification
 of the `mpmath` backend, external code audit, or parameter-uncertainty result is
 claimed; this should not be generalized to the KL-anchored or unregularized game.
 
-## Pre-existing archive-integrity discrepancy (not modified)
+## Range-certificate checksum reconciliation
 
-The **original uploaded ZIP**, before these changes, already had three mismatches
-in `range_certificate/SHA256SUMS.txt`:
+The three inherited mismatches in `range_certificate/SHA256SUMS.txt` have been
+reconciled against the byte-identical original upload and current public GitHub
+`main` files. Both retained experiment logs are explicitly inconclusive, as
+expected by the archived gain JSON and integer replay. Their bytes are unchanged;
+only the three stale manifest SHA-256 entries were updated. The old digests and
+the evidence trail are retained in [ARCHIVE_HASH_RECONCILIATION.md](ARCHIVE_HASH_RECONCILIATION.md).
 
-- `range_certificate/README.md`
-- `range_certificate/results/attributed.log`
-- `range_certificate/results/eps03.log`
+After this correction, the complete legacy archive verifier and the independent
+archive/smoke checks were rerun (results documented in the reconciliation report).
+A passing manifest check applies to the present deposited files; it does not imply
+independent provenance of an earlier historical snapshot or full Arb regeneration.
 
-Their content and stored manifest hashes have been **left unchanged** to avoid
-concealing an existing provenance inconsistency. Because of these inherited
-mismatches, the legacy `python -S verify_archive.py` currently stops at the
-range-certificate manifest check. This does not affect the separate new
-`verify_independent.py --full` calculation, or the original point-ledger replays.
-Reconcile these three files against their source-of-record before claiming that
-the entire legacy archive-integrity suite passes.
+The post-reconciliation full `--full` replay was rerun independently and returned
+0.975668389157 < 1. Its output is included in
+[`runs/independent_global_160_after_reconciliation.json`](runs/independent_global_160_after_reconciliation.json),
+and the full log is retained under `verification_logs/independent_full.txt`.

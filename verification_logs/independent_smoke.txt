@@ -1,0 +1,14 @@
+Independent archive: 13 checked files and matching frozen primitives
+Stored bound 0.975668389157 (reference only; run --full to recompute)
+{
+  "lp_test_cases": 160,
+  "bayesian": {
+    "bayes_checks": 84,
+    "positive_win_lower": "[0.0322926071837650323, 0.0322926071837650323]",
+    "positive_loss_lower": "[0.0226677916683887584, 0.0226677916683887584]",
+    "martingale_identity_checked": true,
+    "belief_mesh_used": false
+  },
+  "scope": "Consistency checks only; full invariant-box and weighted gain are established in independent replay runs."
+}
+Independent smoke checks: PASS

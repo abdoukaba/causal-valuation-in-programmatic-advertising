@@ -1,0 +1,85 @@
+Independent archive: 13 checked files and matching frozen primitives
+Stored bound 0.975668389157 (reference only; run --full to recompute)
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 1 box ([25469, 86486, 25969], [786997, 922759, 714201])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 2 box ([45774, 135674, 40731], [727469, 878700, 622268])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 3 box ([55493, 154491, 47116], [702347, 859568, 587928])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 4 box ([59829, 160077, 49846], [692277, 851407, 573778])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 5 box ([61700, 162423, 50990], [688111, 847962, 567889])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 6 box ([62489, 163398, 51474], [686378, 846514, 565448])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 7 box ([62820, 163797, 51677], [685664, 845907, 564439])
+conditional pass 1 of 6 cells 40
+conditional pass 2 of 6 cells 40
+conditional pass 3 of 6 cells 40
+conditional pass 4 of 6 cells 40
+conditional pass 5 of 6 cells 40
+conditional pass 6 of 6 cells 40
+outer step 8 box ([62958, 163962, 51761], [685368, 845655, 564021])
+Bayesian maps checked {'bayes_checks': 84, 'positive_win_lower': '[0.0322926071837650323, 0.0322926071837650323]', 'positive_loss_lower': '[0.0226677916683887584, 0.0226677916683887584]', 'martingale_identity_checked': True, 'belief_mesh_used': False}
+conditional pass 1 of 8 cells 160
+conditional pass 2 of 8 cells 160
+conditional pass 3 of 8 cells 160
+conditional pass 4 of 8 cells 160
+conditional pass 5 of 8 cells 160
+conditional pass 6 of 8 cells 160
+conditional pass 7 of 8 cells 160
+conditional pass 8 of 8 cells 160
+test kernels 40 of 160
+test kernels 80 of 160
+test kernels 120 of 160
+test kernels 160 of 160
+gain 40 of 160
+gain 80 of 160
+gain 120 of 160
+gain 160 of 160
+{
+  "cells": 160,
+  "verified_gain_interval": "[0.9756683891562933491235778601, 0.9756683891562933491235778601]",
+  "verified_upper_1e12": "975668389157",
+  "strict_contraction": true,
+  "elapsed_seconds": 212.15
+}
+Independent full primitive-to-gain replay: PASS
+Fresh outward upper bound: 0.975668389157
+Fresh report: /mnt/data/hash_reconciliation_work/causal-valuation-in-programmatic-advertising-main/runs/independent_global_160_after_reconciliation.json
