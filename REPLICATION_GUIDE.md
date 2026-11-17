@@ -7,6 +7,7 @@ These notes cover manuscript revisions. The [archive overview](README.md) points
 | Manuscript result | Reproduction materials |
 |---|---|
 | Section 9.3, original continuous Shannon point at 45% | conditional_composite/README.md, Arb verifier, two full ledgers and integer replay |
+| Section 9.3, independent 160-cell primitive-to-contraction verification | conditional_composite/independent_verifier/README.md; `python verify_independent.py --full` from repository root after installing `mpmath==1.3.0` |
 | Section 9.2, certified ranges through 19.5% for the composite | sharp_certificates/comparison/ and REPRODUCE_REVISION.md |
 | Section 9.3, Corollary 4 and Table 16, parameter bands, anchored-KL and joint refit | range_certificate/README.md and run_suite.py |
 | Additional point meshes, pooled allocation, alternative tail, regularization weights and attributed credit | range_certificate/results/, including inconclusive runs |

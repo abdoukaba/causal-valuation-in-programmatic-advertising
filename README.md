@@ -14,11 +14,32 @@ The command checks the three distributed SHA-256 manifests, replays both Section
 
 The replay checks the integer aggregation of the stored enclosures. To recompute the enclosures themselves, use the pinned Python dependencies and the Arb commands in the [point-certificate guide](conditional_composite/README.md) and [extension guide](range_certificate/README.md). Run regenerations in a separate extracted copy because some scripts overwrite the supplied results.
 
+**New: an independent primitive-to-certificate numerical verifier** is included in
+[`conditional_composite/independent_verifier/`](conditional_composite/independent_verifier/README.md).
+It uses `mpmath.iv` rather than Arb and recomputes the Bayesian kernels,
+conditional envelopes, eight fixed-point outer boxes, and weighted gain for the
+frozen 45% Shannon case. Its independent 160-cell upper bound is
+**0.975668389157 < 1**. This implementation-level cross-check is conditional on
+the mathematical comparison inequalities in Supplemental 2; it is not an
+external audit or a formal proof of the interval arithmetic library.
+
+```bash
+python -m pip install -r conditional_composite/independent_verifier/requirements.txt
+python -S verify_independent.py --check  # only fingerprints and provenance
+python verify_independent.py --smoke     # randomized LP and Bayesian checks
+python verify_independent.py --full      # fresh independent numerical certificate
+```
+
+The full check starts with the entire three-action simplex, performs eight
+outer-set updates, and writes `runs/independent_global_160.json`. It does not
+read the original Arb ledger or the saved independent outer boxes.
+
+
 ## Find a result
 
 | Question | Code and evidence |
 | --- | --- |
-| Does the continuous composite have a unique equilibrium at 45% endogenous competition? | [Section 9.3 point verifier and ledgers](conditional_composite/README.md) |
+| Does the continuous composite have a unique equilibrium at 45% endogenous competition? | [Section 9.3 Arb verifier and ledgers](conditional_composite/README.md), [independent end-to-end numerical verifier](conditional_composite/independent_verifier/README.md) |
 | Which competition levels are covered? | [Comparison sweep through 19.5%](sharp_certificates/README.md) and [three contiguous bands from 19.5% through 45%](range_certificate/README.md) |
 | What changes under anchored KL, a joint refit, or a different valuation rule? | [Parameter choices, ledger replays and counterfactuals](range_certificate/README.md) |
 | How do selection into wins, disclosure and reference policies affect value or profit? | [Selection decomposition](results/selection_split.json), [disclosure and policy experiments](code/counterfactuals.py), and [calibrated reference-policy results](results/calib_anchored_grid.json) |

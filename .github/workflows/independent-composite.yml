@@ -1,0 +1,29 @@
+name: Independent composite interval replay
+
+on:
+  workflow_dispatch:
+
+jobs:
+  independent-composite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install independent interval dependency
+        run: python -m pip install -r conditional_composite/independent_verifier/requirements.txt
+      - name: Check verifier provenance
+        run: python -S verify_independent.py --check
+      - name: Run mathematical smoke checks
+        run: python verify_independent.py --smoke
+      - name: Reconstruct Bayesian envelopes, outer boxes and contraction
+        run: python verify_independent.py --full
+      - name: Archive fresh numerical report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: independent-global-160-replay
+          path: runs/independent_global_160.json
+          if-no-files-found: ignore

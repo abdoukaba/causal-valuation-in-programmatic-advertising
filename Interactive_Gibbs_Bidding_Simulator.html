@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interactive Gibbs Bidding Simulator — Fixed-Score Illustration</title>
+<style>
+:root { color-scheme: light; --ink:#17304b; --muted:#52647b; --line:#dbe3ea; --back:#f3f6f9; --paper:#fff; --a:#2365a5; --b:#df8743; --c:#34826e; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--back); color:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.48; }
+main { max-width:850px; margin:clamp(12px,4vw,45px) auto; padding:0 14px 32px; }
+section { background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:clamp(17px,4vw,30px); box-shadow:0 4px 20px rgba(31,54,81,.035); }
+h1 { margin:0 0 6px; font-size:clamp(1.55rem,4vw,2rem); letter-spacing:-.02em; }
+h2 { font-size:1.08rem; margin:22px 0 12px; }
+p { margin:9px 0; }
+.muted { color:var(--muted); }
+.tag { display:inline-block; padding:4px 9px; font-size:.77rem; color:#3e5268; border:1px solid #d4e0e9; background:#f1f6fa; border-radius:20px; margin-bottom:12px; }
+.control { background:#f8fafc; padding:20px; border:1px solid var(--line); border-radius:10px; margin:22px 0; }
+.control-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:14px; }
+#epsilon-value { font-variant-numeric:tabular-nums; font-size:1.65rem; font-weight:750; color:var(--a); }
+input[type="range"] { display:block; width:100%; accent-color:var(--a); height:30px; cursor:pointer; }
+.ends { display:flex; justify-content:space-between; font-size:.8rem; color:var(--muted); }
+button { font:inherit; font-size:.82rem; background:#fff; border:1px solid #c8d4df; border-radius:7px; padding:7px 12px; cursor:pointer; color:var(--ink); }
+button:focus-visible, input:focus-visible { outline:3px solid #9abce1; outline-offset:2px; }
+.bid { margin:18px 0; }
+.bid-head { display:flex; justify-content:space-between; gap:16px; align-items:baseline; margin-bottom:7px; }
+.bid-head strong { font-size:.98rem; }
+.bid-head output { font-weight:750; font-variant-numeric:tabular-nums; }
+.bar { width:100%; height:18px; background:#e6edf3; border-radius:5px; overflow:hidden; }
+.fill { height:100%; width:0; transition:width .08s ease; border-radius:4px; }
+#fill-0 { background:var(--a); } #fill-1 { background:var(--b); } #fill-2 { background:var(--c); }
+.figure { border:1px solid var(--line); border-radius:10px; padding:12px 8px 8px; }
+svg { width:100%; height:auto; display:block; overflow:visible; }
+.legend { display:flex; flex-wrap:wrap; gap:15px; font-size:.81rem; margin:10px 12px 2px; }
+.swatch { width:13px; height:4px; display:inline-block; vertical-align:middle; margin-right:5px; }
+.formula { padding:13px; border-radius:8px; background:#f6f9fb; overflow-x:auto; text-align:center; font-family:ui-serif,Georgia,serif; font-size:1.05rem; white-space:nowrap; }
+.note { margin-top:15px; padding-left:12px; border-left:3px solid #c1d1df; color:var(--muted); font-size:.92rem; }
+footer { text-align:center; font-size:.76rem; color:var(--muted); padding:17px 0; }
+@media(prefers-reduced-motion:reduce) { .fill { transition:none; } }
+</style>
+</head>
+<body>
+<main>
+<section>
+  <div class="tag">Supplemental 1 · Fixed-score illustration · Offline companion</div>
+  <h1>Interactive Gibbs Bidding Simulator</h1>
+  <p class="muted">How Shannon entropy temperature changes randomized bidding when the three total action scores are held fixed.</p>
+  <p class="formula" aria-label="Gibbs probability formula">π<sub>ε</sub>(a) = exp(G<sub>a</sub>/ε) / Σ<sub>c</sub> exp(G<sub>c</sub>/ε)</p>
+  <div class="control">
+    <div class="control-top">
+      <label for="epsilon"><strong>Entropy temperature (ε)</strong></label>
+      <div style="display:flex;align-items:center;gap:10px;"><output id="epsilon-value" for="epsilon">0.14</output><button id="reset" type="button">Reset</button></div>
+    </div>
+    <input id="epsilon" type="range" min="0.01" max="0.30" step="0.01" value="0.14" aria-label="Entropy temperature epsilon">
+    <div class="ends"><span>0.01 · concentrated</span><span>0.30 · more uniform</span></div>
+  </div>
+  <h2>Optimal bidding probabilities</h2>
+  <div id="bids" aria-live="polite">
+    <div class="bid"><div class="bid-head"><strong>Action a = 0 · Score G = 0.05</strong><output id="prob-0">26.5%</output></div><div class="bar"><div class="fill" id="fill-0" style="width:26.5%"></div></div></div>
+    <div class="bid"><div class="bid-head"><strong>Action a = h · Score G = 0.08</strong><output id="prob-1">32.8%</output></div><div class="bar"><div class="fill" id="fill-1" style="width:32.8%"></div></div></div>
+    <div class="bid"><div class="bid-head"><strong>Action a = 2h · Score G = 0.11</strong><output id="prob-2">40.7%</output></div><div class="bar"><div class="fill" id="fill-2" style="width:40.7%"></div></div></div>
+  </div>
+  <h2>Effect across the full temperature range</h2>
+  <div class="figure"><svg id="plot" viewBox="0 0 780 310" role="img" aria-label="Three Gibbs action probability curves for entropy temperatures from 0.01 to 0.30, with a movable marker at the selected temperature"></svg>
+    <div class="legend"><span><i class="swatch" style="background:var(--a)"></i>a = 0</span><span><i class="swatch" style="background:var(--b)"></i>a = h</span><span><i class="swatch" style="background:var(--c)"></i>a = 2h</span><span>Dashed line: selected ε</span></div>
+  </div>
+  <p class="note"><strong>Interpretation.</strong> Smaller ε concentrates probability on the highest-scoring action (a = 2h). Larger ε makes the three probabilities more even. The scores 0.05, 0.08 and 0.11 are illustrative action scores—not bid amounts, fitted profits or recalculated mean-field equilibrium values.</p>
+</section>
+<footer>Standalone HTML · No internet connection, account, backend or external libraries required.</footer>
+</main>
+<script>
+'use strict';
+const scores=[.05,.08,.11], colors=['#2365a5','#df8743','#34826e'];
+const slider=document.getElementById('epsilon'),output=document.getElementById('epsilon-value'),svg=document.getElementById('plot');
+function probabilities(epsilon) {
+  if(!(epsilon>0)) throw new RangeError('epsilon must be positive');
+  const max=Math.max(...scores), w=scores.map(v=>Math.exp((v-max)/epsilon));
+  const sum=w.reduce((a,b)=>a+b,0); return w.map(v=>v/sum);
+}
+const ns='http://www.w3.org/2000/svg';
+function element(name,attrs={},text=''){
+  const e=document.createElementNS(ns,name);
+  for(const [k,v] of Object.entries(attrs))e.setAttribute(k,String(v));
+  if(text)e.textContent=text;
+  svg.appendChild(e);return e;
+}
+const plot={left:65, right:760, top:14, bottom:255};
+const x=e=>plot.left+(e-.01)/(.30-.01)*(plot.right-plot.left);
+const y=p=>plot.bottom-p*(plot.bottom-plot.top);
+function drawPlot(){
+  svg.textContent='';
+  for(const pct of [0, .25, .50, .75, 1]) {
+    element('line',{x1:plot.left,x2:plot.right,y1:y(pct),y2:y(pct),stroke:'#e4eaf0','stroke-width':1});
+    element('text',{x:plot.left-12,y:y(pct)+4,'text-anchor':'end','font-size':12,fill:'#627286'},String(Math.round(pct*100))+'%');
+  }
+  for(const e of [.01,.05,.10,.14,.20,.25,.30]) {
+    element('line',{x1:x(e),x2:x(e),y1:plot.bottom,y2:plot.bottom+5,stroke:'#8694a2'});
+    element('text',{x:x(e),y:plot.bottom+21,'text-anchor':'middle','font-size':12,fill:'#627286'},e.toFixed(2));
+  }
+  element('line',{x1:plot.left,x2:plot.right,y1:plot.bottom,y2:plot.bottom,stroke:'#7d8fa0','stroke-width':1});
+  element('line',{x1:plot.left,x2:plot.left,y1:plot.top,y2:plot.bottom,stroke:'#7d8fa0','stroke-width':1});
+  element('text',{x:(plot.left+plot.right)/2,y:304,'text-anchor':'middle','font-size':13,fill:'#52647b'},'Entropy temperature ε');
+  for(let i=0;i<scores.length;i++){
+    let points=[];
+    for(let j=0;j<=290;j++){
+      const e=.01+j*.001;
+      points.push((j?'L':'M')+x(e).toFixed(2)+' '+y(probabilities(e)[i]).toFixed(2));
+    }
+    element('path',{d:points.join(' '),stroke:colors[i],fill:'none','stroke-width':3,'stroke-linecap':'round'});
+  }
+  element('line',{id:'selected-line',x1:x(.14),x2:x(.14),y1:plot.top,y2:plot.bottom,stroke:'#7e8b98','stroke-width':1.7,'stroke-dasharray':'6 5'});
+  for(let i=0;i<3;i++) element('circle',{id:'selected-dot-'+i,cx:x(.14),cy:y(probabilities(.14)[i]),r:6,fill:colors[i],stroke:'#fff','stroke-width':2});
+}
+function update(){
+  const epsilon=Number(slider.value),p=probabilities(epsilon);
+  output.textContent=epsilon.toFixed(2);
+  for(let i=0;i<3;i++) {
+    const percentage=(100*p[i]).toFixed(1)+'%';
+    document.getElementById('prob-'+i).textContent=percentage;
+    document.getElementById('fill-'+i).style.width=(100*p[i])+'%';
+    const dot=document.getElementById('selected-dot-'+i);
+    dot.setAttribute('cx',x(epsilon)); dot.setAttribute('cy',y(p[i]));
+  }
+  const line=document.getElementById('selected-line'); line.setAttribute('x1',x(epsilon));line.setAttribute('x2',x(epsilon));
+}
+slider.addEventListener('input',update);
+document.getElementById('reset').addEventListener('click',()=>{slider.value='.14';update();slider.focus();});
+drawPlot();update();
+</script>
+</body>
+</html>

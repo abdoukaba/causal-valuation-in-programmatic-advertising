@@ -19,3 +19,29 @@ For the second partition, run
 The second integer upper bound is 974202142743 / 1000000000000. Either verified bound is sufficient for contraction on the invariant set. Time cells enclose integrals uniformly in continuous time. The proof uses no belief discretization or numerical candidate. The integer calculations audit the last aggregation stage. The analytical and elementary-function bounds are in the proof and Arb code.
 
 The optional audit_numerical_envelopes.py and conditional_gain.py use floating point. They are diagnostics. File hashes for the deposited material are in SHA256SUMS.txt. Regeneration can change compressed file bytes because of gzip timestamps. Compare the decompressed ledger and the resulting integer bound when checking a fresh run.
+
+## Independent Bayesian-kernel and conditional-envelope verifier
+
+A second implementation, [independent_verifier/](independent_verifier/README.md),
+reconstructs the eight invariant-set outer boxes and the continuous-time
+weighted contraction bound **directly from frozen model primitives**, using
+`mpmath.iv` instead of Arb. It does **not** import `conditional_arb.py`,
+`budget_gain.py`, the original coefficient ledgers, or existing Arb interval
+outputs. The prior 160-cell bound is **0.975668389157 < 1** on the independently
+reconstructed invariant box. The candidate time weights are retained as fixed
+positive rational witnesses and are freshly checked by the second implementation.
+
+Run from the repository root:
+
+```bash
+python -m pip install -r conditional_composite/independent_verifier/requirements.txt
+python -S verify_independent.py --check   # provenance, not a new numerical run
+python verify_independent.py --smoke      # simplex and Bayesian checks
+python verify_independent.py --full       # regenerate eight boxes and full gain
+```
+
+A fresh full run writes `runs/independent_global_160.json`, and rejects any
+upper bound at or above one. This check independently implements the **numerical**
+enclosure pipeline; the analytical comparison inequalities in Supplemental 2
+remain assumptions of the code-level replay. This does not extend the frozen
+Shannon result to anchored KL, unregularized bids, or parameter uncertainty.
