@@ -67,8 +67,7 @@ The three inherited mismatches in `range_certificate/SHA256SUMS.txt` have been
 reconciled against the byte-identical original upload and current public GitHub
 `main` files. Both retained experiment logs are explicitly inconclusive, as
 expected by the archived gain JSON and integer replay. Their bytes are unchanged;
-only the three stale manifest SHA-256 entries were updated. The old digests and
-the evidence trail are retained in [ARCHIVE_HASH_RECONCILIATION.md](ARCHIVE_HASH_RECONCILIATION.md).
+only the three stale manifest SHA-256 entries were updated.
 
 After this correction, the complete legacy archive verifier and the independent
 archive/smoke checks were rerun (results documented in the reconciliation report).
